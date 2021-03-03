@@ -25,9 +25,9 @@ class _HomeState extends State<Home> {
         body: Center(   
           child: Column(               
             children: <Widget>[   
-              Image.asset('assets/images/Dreave_Logo.jpg'),   
+               Image.asset('assets/images/Dreave_Logo.jpg'),   
                Image.asset('asset/images/People.svg'),
-              Image.asset('asset/images/Sign_In.svg'),
+               Image.asset('asset/images/Sign_In.svg'),
             ],  
              
           ),   
