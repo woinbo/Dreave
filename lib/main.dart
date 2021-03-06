@@ -49,17 +49,17 @@ class App extends StatelessWidget {
           ),
         ),
       ),
-      initialRoute: '/',
+      initialRoute: ROUTES.INITIAL,
       onGenerateRoute: (RouteSettings settings) {
         switch (settings.name) {
-          case '/':
+          case ROUTES.INITIAL:
             return PageRouteBuilder(
                 pageBuilder: (_, a1, a2) => AfterSplashScreen(),
                 settings: settings);
           case '/auth':
             return PageRouteBuilder(
                 pageBuilder: (_, a1, a2) => AuthScreen(), settings: settings);
-          case '/home':
+          case ROUTES.HOME:
             return PageRouteBuilder(
                 pageBuilder: (_, a1, a2) => HomeScreen(), settings: settings);
           default:

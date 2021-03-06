@@ -1,41 +1,41 @@
 {
   "project_info": {
-    "project_number": "290766378849",
-    "project_id": "solution-challenge-7c61a",
-    "storage_bucket": "solution-challenge-7c61a.appspot.com"
+    "project_number": "788940605524",
+    "project_id": "solutionchallenge2021-306819",
+    "storage_bucket": "solutionchallenge2021-306819.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:290766378849:android:1d0dc47235aa5c48b85720",
+        "mobilesdk_app_id": "1:788940605524:android:e7df952ab40d2bcbabc5c1",
         "android_client_info": {
           "package_name": "com.example.solution_challenge"
         }
       },
       "oauth_client": [
         {
-          "client_id": "290766378849-7quk3mdm6pe5auku0hohrrilrrh5sn1o.apps.googleusercontent.com",
+          "client_id": "788940605524-0mocdrmg3gkd80i550vdvf1n1hmm0r3j.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
             "package_name": "com.example.solution_challenge",
-            "certificate_hash": "50633846f749bc87c0e398f22e9d22018423d8bb"
+            "certificate_hash": "6a8b2eda25c4f4750aa187dd4d2f5c6313b0aa5c"
           }
         },
         {
-          "client_id": "290766378849-5ejmkm11ehe9t0ivpl5lrojsr6qn30fc.apps.googleusercontent.com",
+          "client_id": "788940605524-g7bf7eshpikasmnd58nnstmhl3vv8ram.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyBp13Zx4jdMqImtVD12qBqjUbXUq71ml5U"
+          "current_key": "AIzaSyCtea3uL4p4XmVxaaUzc_ck_bUNGSPqs_o"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "290766378849-5ejmkm11ehe9t0ivpl5lrojsr6qn30fc.apps.googleusercontent.com",
+              "client_id": "788940605524-g7bf7eshpikasmnd58nnstmhl3vv8ram.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
