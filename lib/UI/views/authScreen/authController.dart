@@ -15,10 +15,10 @@ class AuthController extends StateControl with WidgetsBindingObserver {
 
   String _contactText = '';
   String get contactText => this._contactText;
-  GoogleSignIn _googleSignIn;
+  late GoogleSignIn _googleSignIn;
 
   AuthController({
-    @required this.context,
+    required this.context,
   }) {
     this.init();
   }
@@ -30,10 +30,10 @@ class AuthController extends StateControl with WidgetsBindingObserver {
       ],
     );
     _googleSignIn.onCurrentUserChanged
-        .listen((GoogleSignInAccount account) async {
+        .listen((GoogleSignInAccount? account) async {
       notifyListeners();
       User _user = User(
-        id: account.id,
+        id: account!.id,
         email: account.email,
         photoUrl: account.photoUrl,
         displayName: account.displayName,

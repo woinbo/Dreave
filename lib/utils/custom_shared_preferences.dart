@@ -10,7 +10,7 @@ class CustomSharedPreferences {
     return prefs.get(key);
   }
 
-  static Future<void> remove(String key) async {
+  static Future<bool> remove(String key) async {
     SharedPreferences prefs = await SharedPreferences.getInstance();
     return prefs.remove(key);
   }

@@ -5,16 +5,16 @@ import 'package:solution_challenge/UI/widgets/divider.dart';
 import 'package:solution_challenge/config/assets.dart';
 
 class AuthScreen extends StatefulWidget {
-  AuthScreen({Key key, this.title}) : super(key: key);
+  AuthScreen({Key? key, this.title}) : super(key: key);
 
-  final String title;
+  final String? title;
 
   @override
   _AuthScreenState createState() => _AuthScreenState();
 }
 
 class _AuthScreenState extends State<AuthScreen> {
-  AuthController _authController;
+  late AuthController _authController;
 
   @override
   void initState() {

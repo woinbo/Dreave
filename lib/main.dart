@@ -29,7 +29,7 @@ class App extends StatelessWidget {
         appBarTheme: AppBarTheme().copyWith(
           iconTheme: IconThemeData(color: Colors.black),
           textTheme: TextTheme().copyWith(
-            headline6: Theme.of(context).primaryTextTheme.headline6.copyWith(
+            headline6: Theme.of(context).primaryTextTheme.headline6!.copyWith(
                   color: Colors.black,
                 ),
           ),
