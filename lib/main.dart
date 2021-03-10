@@ -2,7 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'UI/views/afterSplashScreen/afterSplashScreen.dart';
 import 'UI/views/authScreen/authScreen.dart';
+import 'UI/views/createPostScreen/createPostScreen.dart';
 import 'UI/views/homeScreen/homeScreen.dart';
+import 'UI/views/searchCommunityScreen/searchCommunityScreen.dart';
 import 'UI/widgets/custom_page_route.dart';
 import 'config/constant.dart';
 
@@ -56,12 +58,21 @@ class App extends StatelessWidget {
             return PageRouteBuilder(
                 pageBuilder: (_, a1, a2) => AfterSplashScreen(),
                 settings: settings);
-          case '/auth':
+          case ROUTES.AUTH:
             return PageRouteBuilder(
                 pageBuilder: (_, a1, a2) => AuthScreen(), settings: settings);
           case ROUTES.HOME:
             return PageRouteBuilder(
                 pageBuilder: (_, a1, a2) => HomeScreen(), settings: settings);
+          case ROUTES.SEARCH_COMM:
+            return PageRouteBuilder(
+                pageBuilder: (_, a1, a2) => SearchCommunityScreen(),
+                settings: settings);
+          case ROUTES.CREATE_POST_SCREEN:
+            return PageRouteBuilder(
+                pageBuilder: (_, a1, a2) => CreatePostScreen(),
+                settings: settings);
+
           default:
             return CustomPageRoute.build(
                 builder: (_) => AfterSplashScreen(), settings: settings);

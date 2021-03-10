@@ -26,7 +26,7 @@ class AfterSplashScreen extends StatelessWidget {
                         fontWeight: FontWeight.bold,
                       ),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 30,
                     ),
                     Image.asset(
@@ -86,7 +86,7 @@ class AfterSplashScreen extends StatelessWidget {
                         Expanded(
                           child: GestureDetector(
                             onTap: () {
-                              Navigator.pushNamed(context, ROUTES.AUTH);
+                              Navigator.pushNamed(context, ROUTES.SEARCH_COMM);
                             },
                             child: Container(
                               decoration: BoxDecoration(

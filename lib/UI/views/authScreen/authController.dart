@@ -12,7 +12,6 @@ class AuthController extends StateControl with WidgetsBindingObserver {
   final BuildContext context;
   bool _isLoading = false;
   bool get isLoading => this._isLoading;
-
   String _contactText = '';
   String get contactText => this._contactText;
   late GoogleSignIn _googleSignIn;

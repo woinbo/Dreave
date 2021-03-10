@@ -13,4 +13,6 @@ class ROUTES {
   static const String INITIAL = '/';
   static const String HOME = '/home';
   static const String AUTH = '/auth';
+  static const String SEARCH_COMM = "/comm_search";
+  static const String CREATE_POST_SCREEN = "/create_post";
 }

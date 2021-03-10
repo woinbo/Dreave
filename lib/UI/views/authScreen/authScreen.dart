@@ -3,6 +3,7 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:solution_challenge/UI/views/authScreen/authController.dart';
 import 'package:solution_challenge/UI/widgets/divider.dart';
 import 'package:solution_challenge/config/assets.dart';
+import 'package:solution_challenge/config/constant.dart';
 
 class AuthScreen extends StatefulWidget {
   AuthScreen({Key? key, this.title}) : super(key: key);
@@ -15,6 +16,7 @@ class AuthScreen extends StatefulWidget {
 
 class _AuthScreenState extends State<AuthScreen> {
   late AuthController _authController;
+  String name = "Ankit";
 
   @override
   void initState() {
@@ -126,7 +128,10 @@ class _AuthScreenState extends State<AuthScreen> {
                               icon: Image.asset(
                                 Assets.facebookIcon,
                               ),
-                              onPressed: null,
+                              onPressed: () {
+                                Navigator.pushNamed(
+                                    context, ROUTES.CREATE_POST_SCREEN);
+                              },
                             ),
                           ],
                         )
