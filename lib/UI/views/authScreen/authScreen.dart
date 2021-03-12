@@ -16,10 +16,16 @@ class AuthScreen extends StatefulWidget {
 
 class _AuthScreenState extends State<AuthScreen> {
   late AuthController _authController;
-  String name = "Ankit";
+  late TextEditingController _emailContoller;
+  late TextEditingController _passwordContoller;
+  late TextEditingController _otpContoller;
 
   @override
   void initState() {
+    _emailContoller = TextEditingController();
+    _passwordContoller = TextEditingController();
+    _otpContoller = TextEditingController();
+
     _authController = AuthController(context: context);
     super.initState();
   }
@@ -37,8 +43,11 @@ class _AuthScreenState extends State<AuthScreen> {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Expanded(
-                  flex: 2,
-                  child: Image.asset(Assets.logo),
+                  flex: 1,
+                  child: Image.asset(
+                    Assets.logo,
+                    scale: 26,
+                  ),
                 ),
                 Expanded(
                   flex: 6,
@@ -72,6 +81,7 @@ class _AuthScreenState extends State<AuthScreen> {
                               Padding(
                                 padding: const EdgeInsets.only(bottom: 10),
                                 child: TextFormField(
+                                  controller: _emailContoller,
                                   style: TextStyle(
                                     fontWeight: FontWeight.bold,
                                     fontSize: 16,
@@ -92,6 +102,7 @@ class _AuthScreenState extends State<AuthScreen> {
                                 padding: const EdgeInsets.only(top: 10),
                                 child: TextFormField(
                                   obscureText: true,
+                                  controller: _passwordContoller,
                                   style: TextStyle(
                                     fontWeight: FontWeight.bold,
                                     fontSize: 16,
@@ -102,6 +113,31 @@ class _AuthScreenState extends State<AuthScreen> {
                                     ),
                                     labelText: "Password",
                                     hintText: "Password",
+                                    hintStyle: TextStyle(
+                                      fontSize: 16,
+                                    ),
+                                    suffixIcon: Icon(FontAwesomeIcons.eye),
+                                  ),
+                                ),
+                              ),
+                              Padding(
+                                padding: const EdgeInsets.only(top: 10),
+                                child: TextFormField(
+                                  obscureText: false,
+                                  controller: _otpContoller,
+                                  onEditingComplete: () {
+                                    _authController.smsCode(_otpContoller.text);
+                                  },
+                                  style: TextStyle(
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 16,
+                                  ),
+                                  decoration: InputDecoration(
+                                    border: OutlineInputBorder(
+                                      borderRadius: BorderRadius.circular(7.0),
+                                    ),
+                                    labelText: "OTP",
+                                    hintText: "OTP",
                                     hintStyle: TextStyle(
                                       fontSize: 16,
                                     ),
@@ -152,24 +188,33 @@ class _AuthScreenState extends State<AuthScreen> {
                       color: Color(0xffD1E7F8),
                     ),
                     child: Center(
-                      child: Container(
-                        margin:
-                            EdgeInsets.symmetric(horizontal: 40, vertical: 30),
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.all(
-                            Radius.circular(10.0),
+                      child: GestureDetector(
+                        onTap: () {
+                          if (_emailContoller.text == "8445377229") {
+                            _authController.phoneAuth(_emailContoller.text);
+                          } else
+                            _authController.createAccountWithEmailAndPassword(
+                                _emailContoller.text, _passwordContoller.text);
+                        },
+                        child: Container(
+                          margin: EdgeInsets.symmetric(
+                              horizontal: 40, vertical: 30),
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.all(
+                              Radius.circular(10.0),
+                            ),
+                            color: Color(0xff2AA4F4),
                           ),
-                          color: Color(0xff2AA4F4),
+                          child: Center(
+                              child: Text(
+                            "DONE",
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 18,
+                              fontWeight: FontWeight.w600,
+                            ),
+                          )),
                         ),
-                        child: Center(
-                            child: Text(
-                          "DONE",
-                          style: TextStyle(
-                            color: Colors.white,
-                            fontSize: 18,
-                            fontWeight: FontWeight.w600,
-                          ),
-                        )),
                       ),
                     ),
                   ),

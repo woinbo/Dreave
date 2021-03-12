@@ -6,6 +6,7 @@ const Color primaryColor = Color(0xffD1E7F8);
 //KEYS
 
 const String IS_LOGGED_IN = "IS_LOGGED_IN";
+const String IS_FIRST_TIME = "IS_FIRST_TIME";
 const String USER = "USER";
 
 //ROUTES

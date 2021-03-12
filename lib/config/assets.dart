@@ -14,4 +14,8 @@ class Assets {
   //IMAGES
   static const String marginalia = 'assets/images/marginalia.png';
   static const String dashIcon = "assets/images/dashIcon.png";
+  static const String search = 'assets/images/onboardingScreen/search.png';
+  static const String connect = "assets/images/onboardingScreen/connect.png";
+  static const String communicate =
+      "assets/images/onboardingScreen/community.gif";
 }

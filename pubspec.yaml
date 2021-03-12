@@ -14,6 +14,7 @@ dependencies:
   firebase_auth: ^1.0.0
   firebase_core: ^1.0.0
   font_awesome_flutter: ^9.0.0-nullsafety
+  flutter_svg: ^0.19.3
   google_fonts: ^2.0.0
   google_sign_in: ^5.0.0
   provider: ^5.0.0
@@ -29,6 +30,7 @@ flutter:
     
     - assets/icons/
     - assets/images/
+    - assets/images/onboardingScreen/
     - assets/logo/
   fonts:
     - family: Roboto

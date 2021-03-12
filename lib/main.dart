@@ -1,5 +1,8 @@
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:solution_challenge/UI/views/onboardingScreen/onboarding.dart';
+import 'package:solution_challenge/utils/custom_shared_preferences.dart';
 import 'UI/views/afterSplashScreen/afterSplashScreen.dart';
 import 'UI/views/authScreen/authScreen.dart';
 import 'UI/views/createPostScreen/createPostScreen.dart';
@@ -8,7 +11,18 @@ import 'UI/views/searchCommunityScreen/searchCommunityScreen.dart';
 import 'UI/widgets/custom_page_route.dart';
 import 'config/constant.dart';
 
-void main() => runApp(App());
+bool? isLoggedIn;
+bool? isFirstTime;
+
+void main() async => {
+      WidgetsFlutterBinding.ensureInitialized(),
+      await Firebase.initializeApp(),
+      isFirstTime = await CustomSharedPreferences.get(IS_FIRST_TIME) ?? true,
+      isLoggedIn = await CustomSharedPreferences.get(IS_LOGGED_IN) ?? false,
+      runApp(
+        App(),
+      ),
+    };
 
 class App extends StatelessWidget {
   @override
@@ -51,13 +65,18 @@ class App extends StatelessWidget {
           ),
         ),
       ),
-      initialRoute: ROUTES.INITIAL,
+      initialRoute: isFirstTime!
+          ? ROUTES.INITIAL
+          : isLoggedIn!
+              ? ROUTES.HOME
+              : ROUTES.AUTH,
       onGenerateRoute: (RouteSettings settings) {
         switch (settings.name) {
           case ROUTES.INITIAL:
             return PageRouteBuilder(
-                pageBuilder: (_, a1, a2) => AfterSplashScreen(),
+                pageBuilder: (_, a1, a2) => OnBoardingScreen(),
                 settings: settings);
+
           case ROUTES.AUTH:
             return PageRouteBuilder(
                 pageBuilder: (_, a1, a2) => AuthScreen(), settings: settings);
