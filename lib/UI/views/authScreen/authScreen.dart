@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:solution_challenge/UI/views/authScreen/authController.dart';
+// import 'package:solution_challenge/UI/views/authScreen/authController.dart';
 import 'package:solution_challenge/UI/widgets/divider.dart';
 import 'package:solution_challenge/config/assets.dart';
 import 'package:solution_challenge/config/constant.dart';
@@ -15,7 +15,7 @@ class AuthScreen extends StatefulWidget {
 }
 
 class _AuthScreenState extends State<AuthScreen> {
-  late AuthController _authController;
+  // late AuthController _authController;
   late TextEditingController _emailContoller;
   late TextEditingController _passwordContoller;
   late TextEditingController _otpContoller;
@@ -26,7 +26,7 @@ class _AuthScreenState extends State<AuthScreen> {
     _passwordContoller = TextEditingController();
     _otpContoller = TextEditingController();
 
-    _authController = AuthController(context: context);
+    // _authController = AuthController(context: context);
     super.initState();
   }
 
@@ -126,7 +126,7 @@ class _AuthScreenState extends State<AuthScreen> {
                                   obscureText: false,
                                   controller: _otpContoller,
                                   onEditingComplete: () {
-                                    _authController.smsCode(_otpContoller.text);
+                                    // _authController.smsCode(_otpContoller.text);
                                   },
                                   style: TextStyle(
                                     fontWeight: FontWeight.bold,
@@ -157,7 +157,7 @@ class _AuthScreenState extends State<AuthScreen> {
                                 Assets.googleIcon,
                               ),
                               onPressed: () {
-                                _authController.handleSignIn();
+                                // _authController.handleSignIn();
                               },
                             ),
                             IconButton(
@@ -190,11 +190,13 @@ class _AuthScreenState extends State<AuthScreen> {
                     child: Center(
                       child: GestureDetector(
                         onTap: () {
-                          if (_emailContoller.text == "8445377229") {
-                            _authController.phoneAuth(_emailContoller.text);
-                          } else
-                            _authController.createAccountWithEmailAndPassword(
-                                _emailContoller.text, _passwordContoller.text);
+                          //   if (_emailContoller.text == "8445377229") {
+                          //     _authController.phoneAuth(_emailContoller.text);
+                          //   } else
+                          //     _authController.createAccountWithEmailAndPassword(
+                          //         _emailContoller.text, _passwordContoller.text);
+                          Navigator.pushNamedAndRemoveUntil(
+                              context, ROUTES.SEARCH_COMM, (route) => false);
                         },
                         child: Container(
                           margin: EdgeInsets.symmetric(

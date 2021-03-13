@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:solution_challenge/config/assets.dart';
 
 class SearchCommunityScreen extends StatefulWidget {
@@ -17,140 +19,102 @@ class _SearchCommunityScreenState extends State<SearchCommunityScreen> {
           Assets.backIcon,
           scale: 1.5,
         ),
+        title: Image.asset(
+          Assets.logo,
+          scale: 36,
+        ),
+        centerTitle: true,
         backgroundColor: Colors.white,
       ),
       body: SafeArea(
         child: Container(
+          padding: EdgeInsets.symmetric(horizontal: 24, vertical: 24),
+          width: MediaQuery.of(context).size.width,
+          decoration: BoxDecoration(
+            color: Color(0xff007AD9).withOpacity(0.18),
+            borderRadius: BorderRadius.only(
+              topLeft: Radius.circular(25.0),
+              topRight: Radius.circular(25.0),
+            ),
+          ),
           child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Expanded(
-                child: Row(
-                  children: [
-                    Expanded(
-                      flex: 8,
-                      child: Image.asset(Assets.logo),
-                    ),
-                  ],
+              Text(
+                "Welcome to the Community.",
+                style: TextStyle(
+                  fontSize: 34,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.black,
                 ),
               ),
-              Expanded(
-                flex: 9,
-                child: Container(
-                  width: MediaQuery.of(context).size.width,
-                  margin: EdgeInsets.only(top: 30),
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.only(
-                      topRight: Radius.circular(36.0),
-                      topLeft: Radius.circular(36.0),
+              Text(
+                "You are not alone!",
+                style: TextStyle(
+                  fontSize: 25,
+                  color: Colors.black.withOpacity(0.65),
+                ),
+              ),
+              TextField(
+                decoration: InputDecoration(
+                  border: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(7.0),
+                    borderSide: BorderSide(
+                      width: 0.2,
+                      color: Color(0xffFAFAFA),
                     ),
-                    color: Color(0xffD1E7F8),
                   ),
-                  padding: EdgeInsets.symmetric(horizontal: 36, vertical: 36),
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        mainAxisAlignment: MainAxisAlignment.start,
-                        children: [
-                          Text(
-                            "Welcome to the\nCommunity.",
-                            style: TextStyle(
-                              fontSize: 31,
-                              fontWeight: FontWeight.bold,
-                            ),
-                          ),
-                          Text(
-                            "You are not Alone",
-                            style: TextStyle(
-                              fontSize: 25,
-                              color: Colors.grey.shade700,
-                              fontWeight: FontWeight.w700,
-                            ),
-                          ),
-                          SizedBox(
-                            height: 30,
-                          ),
-                          Form(
-                            child: Column(
-                              children: [
-                                Padding(
-                                  padding: const EdgeInsets.only(bottom: 10),
-                                  child: TextFormField(
-                                    style: TextStyle(
-                                      fontWeight: FontWeight.bold,
-                                      fontSize: 16,
-                                    ),
-                                    decoration: InputDecoration(
-                                      border: OutlineInputBorder(
-                                        borderRadius:
-                                            BorderRadius.circular(7.0),
-                                      ),
-                                      labelText: "Search..",
-                                      hintText: "Search..",
-                                      hintStyle: TextStyle(
-                                        fontSize: 16,
-                                      ),
-                                    ),
-                                  ),
-                                ),
-                                !isHavingData
-                                    ? Text(
-                                        "Search || connect || communcate",
-                                        style: TextStyle(
-                                          fontSize: 15,
-                                        ),
-                                      )
-                                    : Expanded(
-                                        flex: 5,
-                                        child: SingleChildScrollView(
-                                          child: ListView(
-                                            children: List.generate(
-                                                5,
-                                                (index) => ListTile(
-                                                      leading: CircleAvatar(
-                                                        backgroundImage:
-                                                            AssetImage(Assets
-                                                                .googleIcon),
-                                                      ),
-                                                    )),
-                                          ),
-                                        ),
-                                      ),
-                              ],
-                            ),
-                          ),
-                        ],
-                      ),
-                      GestureDetector(
-                        onTap: () {},
-                        child: Container(
-                          padding: EdgeInsets.symmetric(
-                              horizontal: 80, vertical: 16),
-                          decoration: BoxDecoration(
-                            color: Color(0xff2AA4F4),
-                            borderRadius: BorderRadius.all(
-                              Radius.circular(12.0),
-                            ),
-                          ),
-                          child: Text(
-                            "CONTINUE",
-                            style: TextStyle(
-                              color: Colors.white,
-                              fontSize: 16,
-                              fontWeight: FontWeight.bold,
-                              letterSpacing: 2,
-                            ),
-                          ),
-                        ),
-                      )
-                    ],
+                  enabledBorder: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(7.0),
+                    borderSide: BorderSide(
+                      color: Colors.black,
+                      width: 0.2,
+                    ),
+                  ),
+                  fillColor: Color(0xffFAFAFA),
+                  filled: true,
+                  hintText: "Search",
+                  hintStyle: TextStyle(
+                    fontSize: 16,
+                  ),
+                  prefixIcon: Icon(
+                    FontAwesomeIcons.hashtag,
+                    size: 16,
+                    color: Colors.black,
                   ),
                 ),
-              )
+              ),
+              Image.asset(
+                Assets.search_,
+              ),
             ],
           ),
         ),
+      ),
+    );
+  }
+
+  Widget buildPageIndicator({
+    int? slideIndex,
+    int? index,
+  }) {
+    return Expanded(
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Expanded(
+            flex: 3,
+            child: Container(
+              margin: const EdgeInsets.only(left: 0.0, right: 0.0, bottom: 0.0),
+              height: 2.0,
+              decoration: BoxDecoration(
+                color: index! <= slideIndex!
+                    ? Color(0xff2455EF)
+                    : Color(0xffBDCCFA),
+              ),
+            ),
+          ),
+        ],
       ),
     );
   }

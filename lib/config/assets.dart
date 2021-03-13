@@ -18,4 +18,5 @@ class Assets {
   static const String connect = "assets/images/onboardingScreen/connect.png";
   static const String communicate =
       "assets/images/onboardingScreen/community.gif";
+  static const String search_ = "assets/images/search_.png";
 }
