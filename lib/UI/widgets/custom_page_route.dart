@@ -5,17 +5,17 @@ import 'package:flutter/material.dart';
 
 class CustomPageRoute {
   static PageRoute build({
-    Widget Function(BuildContext)? builder,
-    RouteSettings? settings,
+    Widget Function(BuildContext) builder,
+    RouteSettings settings,
     bool fullscreenDialog = false,
   }) {
     return Platform.isIOS
         ? CupertinoPageRoute(
-            builder: builder!,
+            builder: builder,
             settings: settings,
             fullscreenDialog: fullscreenDialog)
         : MaterialPageRoute(
-            builder: builder!,
+            builder: builder,
             settings: settings,
             fullscreenDialog: fullscreenDialog);
   }
