@@ -19,4 +19,9 @@ class Assets {
   static const String communicate =
       "assets/images/onboardingScreen/community.gif";
   static const String search_ = "assets/images/search_.png";
+  static const String kVerify = "assets/images/VerifyIdentity.png";
+
+  //GIF ICONS
+  static const String kSpace = 'assets/images/space.gif';
+  static const String kBell = 'assets/images/Bell.png';
 }

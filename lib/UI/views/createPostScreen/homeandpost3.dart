@@ -15,11 +15,12 @@ class _Homeandpost3 extends State<Homeandpost3> {
         elevation: 0,
         leading: Image.asset(
           Assets.backIcon,
-          scale: 1.5,
+          scale: 1,
         ),
         actions: [
-          SvgPicture.asset("assets/icons/share.svg"),
-          SvgPicture.asset("assets/icons/donate.svg"),
+
+          SvgPicture.asset("assets/icons/share.svg",height: 50, width: 50),
+          SvgPicture.asset("assets/icons/donate.svg",height: 50, width: 50),
         ],
         backgroundColor: Colors.white,
       ),
@@ -28,6 +29,7 @@ class _Homeandpost3 extends State<Homeandpost3> {
           child: Column(
             children: [
               Expanded(
+                flex:1,
                 child: Row(
                   children: [
                     Expanded(
@@ -35,7 +37,7 @@ class _Homeandpost3 extends State<Homeandpost3> {
                       child: Text(
                         "#Achalasia",
                         style: TextStyle(
-                          fontSize: 17,
+                          fontSize: 25,
                           fontWeight: FontWeight.bold,
                         ),
                       ),
@@ -44,7 +46,7 @@ class _Homeandpost3 extends State<Homeandpost3> {
                 ),
               ),
               Expanded(
-                flex: 9,
+                flex: 8,
                 child: Container(
                   width: MediaQuery.of(context).size.width,
                   margin: EdgeInsets.only(top: 30),
@@ -59,55 +61,64 @@ class _Homeandpost3 extends State<Homeandpost3> {
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        mainAxisAlignment: MainAxisAlignment.start,
-                        children: [
-                          Text(
-                            "Create your Own",
-                            style: TextStyle(
-                              fontSize: 34,
-                              fontWeight: FontWeight.bold,
+                      Expanded(
+                        flex:2,
+                            child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          mainAxisAlignment: MainAxisAlignment.start,
+                          children: [
+                            Text(
+                              "Create your Own",
+                              style: TextStyle(
+                                fontSize: 34,
+                                fontWeight: FontWeight.bold,
+                              ),
                             ),
-                          ),
-                          SizedBox(
-                            height: 30,
-                          ),
-                          Text(
-                            "Connect with your Community.",
-                            style: TextStyle(
-                              fontSize: 25,
-                              color: Colors.grey.shade700,
-                              fontWeight: FontWeight.w500,
+                            
+                            Text(
+                              "Connect with your Community.",
+                              style: TextStyle(
+                                fontSize: 25,
+                                color: Colors.grey.shade700,
+                                fontWeight: FontWeight.w500,
+                              ),
                             ),
-                          ),
-                          SvgPicture.asset(
-                            "assets/images/person.svg",
-                          ),
-                        ],
+                            
+                          ],
+                        ),
                       ),
-                      GestureDetector(
+                      Expanded(
+                        flex:4,
+                      child:SvgPicture.asset(
+                              "assets/images/person.svg",
+                              
+                            ),
+                      ),
+                      Expanded(
+                        flex:1,
+                      child: GestureDetector(
                         onTap: () {},
                         child: Container(
                           padding: EdgeInsets.symmetric(
-                              horizontal: 80, vertical: 16),
+                              horizontal: 90, vertical: 16),
                           decoration: BoxDecoration(
                             color: Color(0xff2AA4F4),
                             borderRadius: BorderRadius.all(
-                              Radius.circular(12.0),
+                              Radius.circular(36.0),
                             ),
                           ),
                           child: Text(
                             "GO BACK",
                             style: TextStyle(
                               color: Colors.white,
-                              fontSize: 16,
+                              fontSize: 20,
                               fontWeight: FontWeight.bold,
                               letterSpacing: 2,
                             ),
                           ),
                         ),
-                      )
+                      ),
+                      ),
                     ],
                   ),
                 ),
