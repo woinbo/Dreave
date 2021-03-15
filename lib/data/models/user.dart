@@ -16,10 +16,10 @@ class User {
     this.photoUrl,
   });
 
-  String? id;
-  String? email;
-  String? displayName;
-  String? photoUrl;
+  String id;
+  String email;
+  String displayName;
+  String photoUrl;
 
   factory User.fromJson(Map<String, dynamic> json) => User(
         id: json["id"],
