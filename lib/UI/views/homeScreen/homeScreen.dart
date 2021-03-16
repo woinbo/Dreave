@@ -8,7 +8,7 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
-  User _user;
+  User? _user;
   @override
   void initState() {
     super.initState();
@@ -19,7 +19,7 @@ class _HomeScreenState extends State<HomeScreen> {
     _user = await CustomSharedPreferences.getMyUser();
     setState(() {});
 
-    print(_user.displayName);
+    print(_user!.displayName);
   }
 
   Widget _buildBody() {
@@ -29,11 +29,11 @@ class _HomeScreenState extends State<HomeScreen> {
         children: <Widget>[
           ListTile(
             leading: CircleAvatar(
-              backgroundImage: NetworkImage(_user.photoUrl ??
+              backgroundImage: NetworkImage(_user!.photoUrl ??
                   "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSDWrIiYIAdOLTJ5Ql5YtMUvL3y3kK0Vh5JXQ&usqp=CAU"),
             ),
-            title: Text(_user.displayName ?? 'Ankit'),
-            subtitle: Text(_user.email),
+            title: Text(_user!.displayName ?? 'Ankit'),
+            subtitle: Text(_user!.email!),
           ),
           const Text("Signed in successfully."),
           ElevatedButton(
