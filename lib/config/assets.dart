@@ -20,7 +20,6 @@ class Assets {
       "assets/images/onboardingScreen/community.gif";
   static const String search_ = "assets/images/search_.png";
   static const String kVerify = "assets/images/VerifyIdentity.png";
-  static const String kSponge = "assets/images/Welcome_sponge.png";
 
   //GIF ICONS
   static const String kSpace = 'assets/images/space.gif';
