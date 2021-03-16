@@ -4,6 +4,7 @@ import 'package:solution_challenge/UI/views/createPostScreen/homeandpost3.dart';
 import 'package:solution_challenge/UI/views/userPermission/internetConnection.dart';
 import 'package:solution_challenge/UI/views/userPermission/permissionNeeded.dart';
 import 'package:solution_challenge/UI/views/verifyMobileScreen/verifyYourIdentity.dart';
+import 'package:solution_challenge/UI/views/welcomeSpongeBob/welcomeSpongeBob.dart';
 // import 'package:solution_challenge/UI/views/authScreen/authController.dart';
 import 'package:solution_challenge/UI/widgets/divider.dart';
 import 'package:solution_challenge/config/assets.dart';
@@ -203,7 +204,7 @@ class _AuthScreenState extends State<AuthScreen> {
                             //  context, ROUTES.SEARCH_COMM, (route) => false);
                             Navigator.push(
     context,
-    MaterialPageRoute(builder: (context) =>  VerifyYourIdenity()),
+    MaterialPageRoute(builder: (context) =>  WelcomeSpongeBob()),
   );
                         },
                         child: Container(
