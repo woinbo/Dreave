@@ -1,15 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:solution_challenge/config/assets.dart';
-
-import '../../../config/constant.dart';
-
 class Identity extends StatefulWidget {
   @override
   _Identity createState() => _Identity();
 }
-
 class _Identity extends State<Identity> {
   @override
   Widget build(BuildContext context) {
@@ -61,7 +55,7 @@ class _Identity extends State<Identity> {
               child: Column(
                 children: [
                   Expanded(
-                    flex: 3,
+                    flex: 2,
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
@@ -84,6 +78,7 @@ class _Identity extends State<Identity> {
                     ),
                   ),
                   Expanded(
+                    flex:1,
                     child: TextField(
                       decoration: InputDecoration(
                         border: OutlineInputBorder(
@@ -102,13 +97,131 @@ class _Identity extends State<Identity> {
                         ),
                         fillColor: Color(0xffFAFAFA),
                         filled: true,
-                        hintText: "Search",
+                        hintText: "Full Name",
                         hintStyle: TextStyle(
                           fontSize: 16,
                         ),
                       ),
                     ),
                   ),
+                   Expanded(
+                     flex:1,
+                    child: TextField(
+                      decoration: InputDecoration(
+                        border: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(7.0),
+                          borderSide: BorderSide(
+                            width: 0.2,
+                            color: Color(0xffFAFAFA),
+                          ),
+                        ),
+                        enabledBorder: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(7.0),
+                          borderSide: BorderSide(
+                            color: Colors.black,
+                            width: 0.2,
+                          ),
+                        ),
+                        fillColor: Color(0xffFAFAFA),
+                        filled: true,
+                        hintText: "Identification No.",
+                        hintStyle: TextStyle(
+                          fontSize: 16,
+                        ),
+                      ),
+                    ),
+                  ),
+                  Expanded(
+                    flex:1,
+                    child: TextField(
+                      decoration: InputDecoration(
+                        border: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(7.0),
+                          borderSide: BorderSide(
+                            width: 0.2,
+                            color: Color(0xffFAFAFA),
+                          ),
+                        ),
+                        enabledBorder: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(7.0),
+                          borderSide: BorderSide(
+                            color: Colors.black,
+                            width: 0.2,
+                          ),
+                        ),
+                        fillColor: Color(0xffFAFAFA),
+                        filled: true,
+                        hintText: "Upload  Registration Certification",
+                        hintStyle: TextStyle(
+                          fontSize: 16,
+                        ),
+                      ),
+                    ),
+                  ),
+                    Expanded(
+                    child:Text(
+                    "Any other document that you want to upload as proof of identity/doctor.",
+                    style: TextStyle(
+                            fontSize: 13,
+                            fontWeight: FontWeight.bold,
+                            color: Colors.black,
+                          ),
+                    ),
+                  ),
+                  Expanded(
+                        flex:1,
+                      child: GestureDetector(
+                        onTap: () {},
+                        child: Container(
+                          padding: EdgeInsets.symmetric(
+                              horizontal: 90, vertical: 16),
+                          decoration: BoxDecoration(
+                            color: Color(0xff2AA4F4),
+                            borderRadius: BorderRadius.all(
+                              Radius.circular(36.0),
+                            ),
+                          ),
+                          child: Image.asset(Assets.kUpload)
+                        ),
+                      ),
+                      ),
+                  Expanded(
+                    child:Text(
+                      "* If your verification is succesful you will\nreceive a confirmation mail.",
+                      style: TextStyle(
+                            fontSize: 13,
+                            fontWeight: FontWeight.bold,
+                            color: Colors.black,
+                          ),
+                    ),
+                    ),
+                  Expanded(
+                        flex:1,
+                      child: GestureDetector(
+                        onTap: () {},
+                        child: Container(
+                          padding: EdgeInsets.symmetric(
+                              horizontal: 90, vertical: 16),
+                          decoration: BoxDecoration(
+                            color: Color(0xff2AA4F4),
+                            borderRadius: BorderRadius.all(
+                              Radius.circular(36.0),
+                            ),
+                          ),
+                          child: Center(
+                      child: Text(
+                        "Verify",
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 16,
+                          fontWeight: FontWeight.bold,
+                          letterSpacing: 2,
+                        ),
+                      ),
+                      ),
+                        ),
+                      ),
+                      ),
                 ],
               ),
             ),

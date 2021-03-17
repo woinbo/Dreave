@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:solution_challenge/UI/views/onboardingScreen/onboarding.dart';
 import 'package:solution_challenge/UI/views/searchCommunityScreen/communityDescription.dart';
+import 'package:solution_challenge/UI/views/verifyMobileScreen/Identity.dart';
 import 'package:solution_challenge/utils/custom_shared_preferences.dart';
 import 'UI/views/afterSplashScreen/afterSplashScreen.dart';
 import 'UI/views/authScreen/authScreen.dart';
@@ -96,6 +97,11 @@ class App extends StatelessWidget {
             return PageRouteBuilder(
                 pageBuilder: (_, a1, a2) => CreatePostScreen(),
                 settings: settings);
+          case ROUTES.CREATE_POST_SCREEN:
+            return PageRouteBuilder(
+                pageBuilder: (_, a1, a2) => Identity(),
+                settings: settings);
+      
 
           default:
             return CustomPageRoute.build(

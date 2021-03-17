@@ -17,4 +17,5 @@ class ROUTES {
   static const String SEARCH_COMM = "/comm_search";
   static const String CREATE_POST_SCREEN = "/create_post";
   static const String COMMUNITY_DES = "/CommunityDescription";
+  static const String IDENTITY = "/Identity";
 }
