@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:solution_challenge/config/assets.dart';
 
 class VerifyYourIdenity extends StatefulWidget {
@@ -6,7 +7,7 @@ class VerifyYourIdenity extends StatefulWidget {
   _VerifyYourIdenity createState() => _VerifyYourIdenity();
 }
 
-class _VerifyYourIdenity extends State<VerifyYourIdenity> {
+class _VerifyYourIdenity extends State<VerifyYourIdenity>{
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -35,90 +36,72 @@ class _VerifyYourIdenity extends State<VerifyYourIdenity> {
             ),
           ),
           child: Column(
-            crossAxisAlignment: CrossAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Expanded(
-                flex: 1,
-                child: Text(
-                  "Verify your Identity",
-                  style: TextStyle(
-                    fontSize: 34,
-                    fontWeight: FontWeight.bold,
-                    color: Colors.black,
-                  ),
+              Text(
+                "Verify your \nIdentity",
+                style: TextStyle(
+                  fontSize: 34,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.black,
                 ),
               ),
-              Expanded(
-                flex: 2,
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  children: [
-                    Expanded(
-                      flex: 4,
-                      child: Image.asset(
-                        Assets.kVerify,
-                      ),
-                    ),
-                    Expanded(
-                      flex: 2,
-                      child: RichText(
-                        text: TextSpan(
-                          text: 'UPLOADED SUCCESFULLY\n',
-                          style: TextStyle(
-                            fontSize: 25,
-                            fontWeight: FontWeight.bold,
-                            color: Colors.black,
-                          ),
-                          children: [
-                            TextSpan(
-                              text:
-                                  "NOTE: We are reviewing you identity after succesfully \nindentification you will be alloted doctor badge",
-                              style: TextStyle(
-                                fontSize: 12,
-                                fontWeight: FontWeight.w300,
-                                color: Colors.black,
+              
+              SizedBox(
+                height:100,
+              ),
+              Image.asset(
+                Assets.kVerify,
+              ),
+              SizedBox(
+               height: 40
+              ),
+              Text(
+                "UPLOADED SUCCESFULLY",
+                style: TextStyle(
+                  fontSize: 25,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.black,
+                ),
+              ),
+              SizedBox(
+              height: 123,   
+              ),
+              GestureDetector(
+                             
+                            onTap: () {},
+                            child: Container(
+                              margin: EdgeInsets.symmetric(
+                                horizontal:32.0, vertical:8.0
+                              ),
+                              padding: EdgeInsets.symmetric(
+                                  horizontal: 80, vertical: 16),
+                              decoration: BoxDecoration(
+                                color: Color(0xff2AA4F4),
+                                borderRadius: BorderRadius.all(
+                                  Radius.circular(12.0),
+                                ),
+                              ),
+                              child: Center(
+                                child: Text(
+                                "Retry",
+                                  style: TextStyle(
+                                    color: Colors.white,
+                                    fontSize: 16,
+                                    fontWeight: FontWeight.bold,
+                                    letterSpacing: 2,
+                                  ),
+                                ),
                               ),
                             ),
-                          ],
-                        ),
-                        textAlign: TextAlign.center,
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-              Expanded(
-                flex: 1,
-                child: GestureDetector(
-                  onTap: () {},
-                  child: Container(
-                    margin:
-                        EdgeInsets.symmetric(horizontal: 24.0, vertical: 42.0),
-                    padding: EdgeInsets.symmetric(horizontal: 40, vertical: 0),
-                    decoration: BoxDecoration(
-                      color: Color(0xff2AA4F4),
-                      borderRadius: BorderRadius.all(
-                        Radius.circular(12.0),
-                      ),
-                    ),
-                    child: Center(
-                      child: Text(
-                        "Retry",
-                        style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 16,
-                          fontWeight: FontWeight.bold,
-                          letterSpacing: 2,
-                        ),
-                      ),
-                    ),
-                  ),
-                ),
-              ),
+                          ),
             ],
           ),
+          
         ),
       ),
     );
   }
+
 }
+  

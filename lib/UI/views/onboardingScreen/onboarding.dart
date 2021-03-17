@@ -13,8 +13,8 @@ class OnBoardingScreen extends StatefulWidget {
 }
 
 class _OnBoardingScreenState extends State<OnBoardingScreen> {
-  PageController? controller;
-  List<_SliderModel>? mySlides = <_SliderModel>[
+  PageController controller;
+  List<_SliderModel> mySlides = <_SliderModel>[
     _SliderModel(
       imageAssetPath: Image.asset(
         Assets.search,
@@ -35,13 +35,13 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
     ),
   ];
 
-  List? pageIndicatorColorList = [
+  List pageIndicatorColorList = [
     Colors.green,
     Colors.blue,
     Colors.red,
   ];
 
-  int? slideIndex = 0;
+  int slideIndex = 0;
   @override
   void initState() {
     controller = PageController();
@@ -80,8 +80,8 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                 children: [
                   GestureDetector(
                     onTap: () {
-                      if (controller!.hasClients) {
-                        controller!.animateToPage(mySlides!.length - 1,
+                      if (controller.hasClients) {
+                        controller.animateToPage(mySlides.length - 1,
                             duration: Duration(milliseconds: 200),
                             curve: Curves.easeInExpo);
                       }
@@ -96,7 +96,7 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
             Expanded(
               flex: 8,
               child: PageView.builder(
-                itemCount: mySlides!.length,
+                itemCount: mySlides.length,
                 controller: controller,
                 onPageChanged: (index) {
                   setState(
@@ -106,9 +106,9 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                   );
                 },
                 itemBuilder: (_, index) => _SlideTile(
-                  image: mySlides![index].imageAssetPath,
-                  title: mySlides![index].title,
-                  desc: mySlides![index].desc,
+                  image: mySlides[index].imageAssetPath,
+                  title: mySlides[index].title,
+                  desc: mySlides[index].desc,
                   isFirst: true,
                   titleStye: TextStyle(
                     fontSize: 35,
@@ -131,7 +131,7 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                   ),
                   Row(
                     children: [
-                      for (int i = 0; i < mySlides!.length; i++,)
+                      for (int i = 0; i < mySlides.length; i++,)
                         i == slideIndex
                             ? buildPageIndicator(
                                 slideIndex: slideIndex,
@@ -143,7 +143,7 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                               ),
                     ],
                   ),
-                  slideIndex != mySlides!.length - 1
+                  slideIndex != mySlides.length - 1
                       ? Padding(
                           padding: const EdgeInsets.symmetric(vertical: 30),
                           child: Row(
@@ -154,7 +154,7 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                                     const EdgeInsets.symmetric(horizontal: 12),
                                 child: Row(
                                   children: [
-                                    for (int i = 0; i < mySlides!.length; i++,)
+                                    for (int i = 0; i < mySlides.length; i++,)
                                       i == slideIndex
                                           ? smallBuildPageIndicator(
                                               slideIndex: slideIndex,
@@ -177,8 +177,8 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                                 ),
                                 child: TextButton(
                                   onPressed: () {
-                                    if (controller!.hasClients)
-                                      controller!.animateToPage(slideIndex! + 1,
+                                    if (controller.hasClients)
+                                      controller.animateToPage(slideIndex + 1,
                                           duration: Duration(milliseconds: 200),
                                           curve: Curves.easeIn);
                                   },
@@ -243,14 +243,14 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
 
   @override
   void dispose() {
-    controller!.dispose();
+    controller.dispose();
     super.dispose();
   }
 }
 
 Widget buildPageIndicator({
-  int? slideIndex,
-  int? index,
+  int slideIndex,
+  int index,
 }) {
   return Expanded(
     child: Row(
@@ -263,7 +263,7 @@ Widget buildPageIndicator({
             height: 2.0,
             decoration: BoxDecoration(
               color:
-                  index! <= slideIndex! ? Color(0xff2455EF) : Color(0xffBDCCFA),
+                  index <= slideIndex ? Color(0xff2455EF) : Color(0xffBDCCFA),
             ),
           ),
         ),
@@ -273,15 +273,15 @@ Widget buildPageIndicator({
 }
 
 Widget smallBuildPageIndicator({
-  int? slideIndex,
-  int? index,
+  int slideIndex,
+  int index,
 }) {
   return Container(
     margin: const EdgeInsets.only(left: 1.0, right: 1.0, bottom: 0.0),
     height: slideIndex == index ? 4 : 3,
     width: slideIndex == index ? 20 : 3,
     decoration: BoxDecoration(
-      color: index! <= slideIndex! ? Colors.black : Colors.black,
+      color: index <= slideIndex ? Colors.black : Colors.black,
       borderRadius: BorderRadius.all(
         Radius.circular(
           70.0,
@@ -292,13 +292,13 @@ Widget smallBuildPageIndicator({
 }
 
 class _SlideTile extends StatelessWidget {
-  final Widget? image;
-  final String? title, desc;
+  final Widget image;
+  final String title, desc;
   final bool isFirst;
-  final double? minTitleFontSize;
-  final TextStyle? titleStye;
-  final TextStyle? descStyle;
-  final double? miniDescFontSize;
+  final double minTitleFontSize;
+  final TextStyle titleStye;
+  final TextStyle descStyle;
+  final double miniDescFontSize;
 
   const _SlideTile({
     this.image,
@@ -319,17 +319,17 @@ class _SlideTile extends StatelessWidget {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          image!,
+          image,
           const SizedBox(
             height: 8,
           ),
           Text(
-            title!,
+            title,
             maxLines: 1,
             style: titleStye,
           ),
           Text(
-            desc!,
+            desc,
             maxLines: 1,
             style: descStyle,
           )
@@ -348,9 +348,9 @@ class _SliderModel {
     this.titleStyle,
   });
 
-  final Image? imageAssetPath;
+  final Image imageAssetPath;
   final String title;
-  final TextStyle? titleStyle;
+  final TextStyle titleStyle;
   final String desc;
-  final TextStyle? descStyle;
+  final TextStyle descStyle;
 }

@@ -2,6 +2,7 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:solution_challenge/UI/views/onboardingScreen/onboarding.dart';
+import 'package:solution_challenge/UI/views/searchCommunityScreen/communityDescription.dart';
 import 'package:solution_challenge/utils/custom_shared_preferences.dart';
 import 'UI/views/afterSplashScreen/afterSplashScreen.dart';
 import 'UI/views/authScreen/authScreen.dart';
@@ -11,8 +12,8 @@ import 'UI/views/searchCommunityScreen/searchCommunityScreen.dart';
 import 'UI/widgets/custom_page_route.dart';
 import 'config/constant.dart';
 
-bool? isLoggedIn;
-bool? isFirstTime;
+bool isLoggedIn;
+bool isFirstTime;
 
 void main() async => {
       WidgetsFlutterBinding.ensureInitialized(),
@@ -45,7 +46,7 @@ class App extends StatelessWidget {
         appBarTheme: AppBarTheme().copyWith(
           iconTheme: IconThemeData(color: Colors.black),
           textTheme: TextTheme().copyWith(
-            headline6: Theme.of(context).primaryTextTheme.headline6!.copyWith(
+            headline6: Theme.of(context).primaryTextTheme.headline6.copyWith(
                   color: Colors.black,
                 ),
           ),
@@ -65,9 +66,9 @@ class App extends StatelessWidget {
           ),
         ),
       ),
-      initialRoute: isFirstTime!
+      initialRoute: isFirstTime
           ? ROUTES.INITIAL
-          : isLoggedIn!
+          : isLoggedIn
               ? ROUTES.HOME
               : ROUTES.AUTH,
       onGenerateRoute: (RouteSettings settings) {
@@ -86,6 +87,10 @@ class App extends StatelessWidget {
           case ROUTES.SEARCH_COMM:
             return PageRouteBuilder(
                 pageBuilder: (_, a1, a2) => SearchCommunityScreen(),
+                settings: settings);
+          case ROUTES.COMMUNITY_DES:
+            return PageRouteBuilder(
+                pageBuilder: (_, a1, a2) => CommunityDescription(),
                 settings: settings);
           case ROUTES.CREATE_POST_SCREEN:
             return PageRouteBuilder(
