@@ -221,7 +221,7 @@ class _AuthScreenState extends State<AuthScreen> {
                           //     _authController.createAccountWithEmailAndPassword(
                           //         _emailContoller.text, _passwordContoller.text);
                           Navigator.pushNamedAndRemoveUntil(
-                              context, ROUTES.IDENTITY, (route) => false);
+                              context, ROUTES.CHATTING, (route) => false);
                         },
                         child: Container(
                           margin: EdgeInsets.symmetric(

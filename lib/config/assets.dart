@@ -22,8 +22,9 @@ class Assets {
   static const String kVerify = "assets/images/VerifyIdentity.png";
   static const String kUpload = "assets/images/Upload.png";
   static const String kParty =  "assets/images/Party.png";
-
+  static const String kWriter = "assets/icons/Writer.png";
   //GIF ICONS
   static const String kSpace = 'assets/images/space.gif';
   static const String kBell = 'assets/images/Bell.png';
+  
 }

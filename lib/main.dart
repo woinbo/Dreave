@@ -1,6 +1,8 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:solution_challenge/UI/views/Chat/chattingWindow.dart';
+import 'package:solution_challenge/UI/views/Chat/pendingChat.dart';
 import 'package:solution_challenge/UI/views/onboardingScreen/onboarding.dart';
 import 'package:solution_challenge/UI/views/searchCommunityScreen/communityDescription.dart';
 import 'package:solution_challenge/UI/views/verifyMobileScreen/Identity.dart';
@@ -78,7 +80,6 @@ class App extends StatelessWidget {
             return PageRouteBuilder(
                 pageBuilder: (_, a1, a2) => OnBoardingScreen(),
                 settings: settings);
-
           case ROUTES.AUTH:
             return PageRouteBuilder(
                 pageBuilder: (_, a1, a2) => AuthScreen(), settings: settings);
@@ -97,12 +98,18 @@ class App extends StatelessWidget {
             return PageRouteBuilder(
                 pageBuilder: (_, a1, a2) => CreatePostScreen(),
                 settings: settings);
-          case ROUTES.CREATE_POST_SCREEN:
+          case ROUTES.IDENTITY:
             return PageRouteBuilder(
                 pageBuilder: (_, a1, a2) => Identity(),
                 settings: settings);
-      
-
+           case ROUTES.CHATTING:
+            return PageRouteBuilder(
+                pageBuilder: (_, a1, a2) => Chatting(),
+                settings: settings);     
+            case ROUTES.PENDINGCHAT:
+            return PageRouteBuilder(
+                pageBuilder: (_, a1, a2) => PendingChat(),
+                settings: settings);     
           default:
             return CustomPageRoute.build(
                 builder: (_) => AfterSplashScreen(), settings: settings);
