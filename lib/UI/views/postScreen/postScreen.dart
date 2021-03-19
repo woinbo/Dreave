@@ -58,7 +58,7 @@ class _PostScreen extends State<PostScreen> {
         elevation: 0,
         leading: Image.asset(
           Assets.kBackIcon,
-          scale: 1.5,
+          scale: 5,
         ),
         title: Image.asset(
           Assets.klogo,

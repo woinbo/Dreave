@@ -18,7 +18,7 @@ class _EnterSymptomsState extends State<EnterSymptoms> {
         elevation: 0,
         leading: Image.asset(
           Assets.kBackIcon,
-          scale: 1.5,
+          scale: 5,
         ),
         title: Image.asset(
           Assets.klogo,
@@ -127,10 +127,7 @@ class _EnterSymptomsState extends State<EnterSymptoms> {
                                 isHavingData = !isHavingData;
                               });
                             },
-                            child: SvgPicture.asset(
-                              "assets/icons/search_more.svg",
-                              height: 36,
-                            ),
+                            child: Image.asset(Assets.kSearchMore),
                           ),
                         ),
                       ],
@@ -141,7 +138,8 @@ class _EnterSymptomsState extends State<EnterSymptoms> {
                           flex: 5,
                           child: Image.asset(
                             Assets.kSearchSymptoms,
-                          ))
+                          ),
+                        )
                       : Expanded(
                           flex: 7,
                           child: Container(

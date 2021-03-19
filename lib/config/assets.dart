@@ -26,6 +26,7 @@ class Assets {
   static const String kShare = 'assets/icons/shareIcon.png';
   static const String kUpload = 'assets/icons/uploadIcon.png';
   static const String kverified = 'assets/icons/verifiedIcon.png';
+  static const String kSearchMore = 'assets/icons/searchMoreIcon.png';
 
   //IMAGES
   static const String kMarginalia = 'assets/images/marginalia.png';
