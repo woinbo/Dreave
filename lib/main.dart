@@ -80,7 +80,6 @@ class App extends StatelessWidget {
             return PageRouteBuilder(
                 pageBuilder: (_, a1, a2) => OnBoardingScreen(),
                 settings: settings);
-
           case ROUTES.AUTH:
             return PageRouteBuilder(
                 pageBuilder: (_, a1, a2) => AuthScreen(), settings: settings);
@@ -110,7 +109,6 @@ class App extends StatelessWidget {
             return PageRouteBuilder(
                 pageBuilder: (_, a1, a2) => VerifyIdenityComplete(),
                 settings: settings);
-
           default:
             return CustomPageRoute.build(
                 builder: (_) => AfterSplashScreen(), settings: settings);
