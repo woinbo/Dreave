@@ -4,12 +4,12 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:solution_challenge/config/assets.dart';
 import 'package:solution_challenge/config/constant.dart';
 
-class SearchCommunityScreen extends StatefulWidget {
+class EnterSymptoms extends StatefulWidget {
   @override
-  _SearchCommunityScreenState createState() => _SearchCommunityScreenState();
+  _EnterSymptomsState createState() => _EnterSymptomsState();
 }
 
-class _SearchCommunityScreenState extends State<SearchCommunityScreen> {
+class _EnterSymptomsState extends State<EnterSymptoms> {
   bool isHavingData = false;
   @override
   Widget build(BuildContext context) {

@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:solution_challenge/config/assets.dart';
 import 'package:solution_challenge/config/constant.dart';
 
@@ -93,7 +92,8 @@ class CommunityDescription extends StatelessWidget {
                     flex: 2,
                     child: GestureDetector(
                       onTap: () {
-                        Navigator.pushNamed(context, ROUTES.COMMUNITY_DES);
+                        Navigator.pushNamed(
+                            context, ROUTES.COMMUNICATION_REGISTRATION);
                       },
                       child: Container(
                         margin:

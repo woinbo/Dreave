@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:solution_challenge/config/assets.dart';
+import 'package:solution_challenge/config/constant.dart';
+
 class Identity extends StatefulWidget {
   @override
   _Identity createState() => _Identity();
 }
+
 class _Identity extends State<Identity> {
   @override
   Widget build(BuildContext context) {
@@ -78,7 +81,7 @@ class _Identity extends State<Identity> {
                     ),
                   ),
                   Expanded(
-                    flex:1,
+                    flex: 1,
                     child: TextField(
                       decoration: InputDecoration(
                         border: OutlineInputBorder(
@@ -104,8 +107,8 @@ class _Identity extends State<Identity> {
                       ),
                     ),
                   ),
-                   Expanded(
-                     flex:1,
+                  Expanded(
+                    flex: 1,
                     child: TextField(
                       decoration: InputDecoration(
                         border: OutlineInputBorder(
@@ -132,7 +135,7 @@ class _Identity extends State<Identity> {
                     ),
                   ),
                   Expanded(
-                    flex:1,
+                    flex: 1,
                     child: TextField(
                       decoration: InputDecoration(
                         border: OutlineInputBorder(
@@ -158,21 +161,21 @@ class _Identity extends State<Identity> {
                       ),
                     ),
                   ),
-                    Expanded(
-                    child:Text(
-                    "Any other document that you want to upload as proof of identity/doctor.",
-                    style: TextStyle(
-                            fontSize: 13,
-                            fontWeight: FontWeight.bold,
-                            color: Colors.black,
-                          ),
+                  Expanded(
+                    child: Text(
+                      "Any other document that you want to upload as proof of identity/doctor.",
+                      style: TextStyle(
+                        fontSize: 13,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.black,
+                      ),
                     ),
                   ),
                   Expanded(
-                        flex:1,
-                      child: GestureDetector(
-                        onTap: () {},
-                        child: Container(
+                    flex: 1,
+                    child: GestureDetector(
+                      onTap: () {},
+                      child: Container(
                           padding: EdgeInsets.symmetric(
                               horizontal: 90, vertical: 16),
                           decoration: BoxDecoration(
@@ -181,47 +184,49 @@ class _Identity extends State<Identity> {
                               Radius.circular(36.0),
                             ),
                           ),
-                          child: Image.asset(Assets.kUpload)
-                        ),
-                      ),
-                      ),
+                          child: Image.asset(Assets.kUpload)),
+                    ),
+                  ),
                   Expanded(
-                    child:Text(
+                    child: Text(
                       "* If your verification is succesful you will\nreceive a confirmation mail.",
                       style: TextStyle(
-                            fontSize: 13,
-                            fontWeight: FontWeight.bold,
-                            color: Colors.black,
-                          ),
+                        fontSize: 13,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.black,
+                      ),
                     ),
-                    ),
+                  ),
                   Expanded(
-                        flex:1,
-                      child: GestureDetector(
-                        onTap: () {},
-                        child: Container(
-                          padding: EdgeInsets.symmetric(
-                              horizontal: 90, vertical: 16),
-                          decoration: BoxDecoration(
-                            color: Color(0xff2AA4F4),
-                            borderRadius: BorderRadius.all(
-                              Radius.circular(36.0),
+                    flex: 1,
+                    child: GestureDetector(
+                      onTap: () {
+                        Navigator.pushNamed(
+                            context, ROUTES.DOCTOR_REGIS_COMPLETE);
+                      },
+                      child: Container(
+                        padding:
+                            EdgeInsets.symmetric(horizontal: 90, vertical: 16),
+                        decoration: BoxDecoration(
+                          color: Color(0xff2AA4F4),
+                          borderRadius: BorderRadius.all(
+                            Radius.circular(36.0),
+                          ),
+                        ),
+                        child: Center(
+                          child: Text(
+                            "Verify",
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 16,
+                              fontWeight: FontWeight.bold,
+                              letterSpacing: 2,
                             ),
                           ),
-                          child: Center(
-                      child: Text(
-                        "Verify",
-                        style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 16,
-                          fontWeight: FontWeight.bold,
-                          letterSpacing: 2,
                         ),
                       ),
-                      ),
-                        ),
-                      ),
-                      ),
+                    ),
+                  ),
                 ],
               ),
             ),

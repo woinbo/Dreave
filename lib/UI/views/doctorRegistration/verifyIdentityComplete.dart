@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:solution_challenge/config/assets.dart';
 
-class VerifyYourIdenity extends StatefulWidget {
+class VerifyIdenityComplete extends StatefulWidget {
   @override
-  _VerifyYourIdenity createState() => _VerifyYourIdenity();
+  _VerifyIdenityComplete createState() => _VerifyIdenityComplete();
 }
 
-class _VerifyYourIdenity extends State<VerifyYourIdenity> {
+class _VerifyIdenityComplete extends State<VerifyIdenityComplete> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(

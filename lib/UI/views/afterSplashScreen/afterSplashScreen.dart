@@ -86,7 +86,7 @@ class AfterSplashScreen extends StatelessWidget {
                         Expanded(
                           child: GestureDetector(
                             onTap: () {
-                              Navigator.pushNamed(context, ROUTES.SEARCH_COMM);
+                              Navigator.pushNamed(context, ROUTES.ENTER_SYM);
                             },
                             child: Container(
                               decoration: BoxDecoration(

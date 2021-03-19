@@ -3,7 +3,7 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:solution_challenge/UI/views/createPostScreen/homeandpost3.dart';
 import 'package:solution_challenge/UI/views/userPermission/internetConnection.dart';
 import 'package:solution_challenge/UI/views/userPermission/permissionNeeded.dart';
-import 'package:solution_challenge/UI/views/verifyMobileScreen/verifyYourIdentity.dart';
+import 'package:solution_challenge/UI/views/doctorRegistration/verifyIdentityComplete.dart';
 // import 'package:solution_challenge/UI/views/authScreen/authController.dart';
 import 'package:solution_challenge/UI/widgets/divider.dart';
 import 'package:solution_challenge/config/assets.dart';
@@ -220,8 +220,7 @@ class _AuthScreenState extends State<AuthScreen> {
                           //   } else
                           //     _authController.createAccountWithEmailAndPassword(
                           //         _emailContoller.text, _passwordContoller.text);
-                          Navigator.pushNamedAndRemoveUntil(
-                              context, ROUTES.IDENTITY, (route) => false);
+                          Navigator.pushNamed(context, ROUTES.ENTER_SYM);
                         },
                         child: Container(
                           margin: EdgeInsets.symmetric(

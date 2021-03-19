@@ -1,15 +1,17 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:solution_challenge/UI/views/communityRegistrationScreen/communityRegistration.dart';
+import 'package:solution_challenge/UI/views/communityRegistrationScreen/enterSymptomsScreen.dart';
+import 'package:solution_challenge/UI/views/communityRegistrationScreen/communityDescription.dart';
+import 'package:solution_challenge/UI/views/doctorRegistration/verifyIdentityComplete.dart';
 import 'package:solution_challenge/UI/views/onboardingScreen/onboarding.dart';
-import 'package:solution_challenge/UI/views/searchCommunityScreen/communityDescription.dart';
-import 'package:solution_challenge/UI/views/verifyMobileScreen/Identity.dart';
+import 'package:solution_challenge/UI/views/doctorRegistration/Identity.dart';
 import 'package:solution_challenge/utils/custom_shared_preferences.dart';
 import 'UI/views/afterSplashScreen/afterSplashScreen.dart';
 import 'UI/views/authScreen/authScreen.dart';
 import 'UI/views/createPostScreen/createPostScreen.dart';
 import 'UI/views/homeScreen/homeScreen.dart';
-import 'UI/views/searchCommunityScreen/searchCommunityScreen.dart';
 import 'UI/widgets/custom_page_route.dart';
 import 'config/constant.dart';
 
@@ -85,9 +87,9 @@ class App extends StatelessWidget {
           case ROUTES.HOME:
             return PageRouteBuilder(
                 pageBuilder: (_, a1, a2) => HomeScreen(), settings: settings);
-          case ROUTES.SEARCH_COMM:
+          case ROUTES.ENTER_SYM:
             return PageRouteBuilder(
-                pageBuilder: (_, a1, a2) => SearchCommunityScreen(),
+                pageBuilder: (_, a1, a2) => EnterSymptoms(),
                 settings: settings);
           case ROUTES.COMMUNITY_DES:
             return PageRouteBuilder(
@@ -97,11 +99,17 @@ class App extends StatelessWidget {
             return PageRouteBuilder(
                 pageBuilder: (_, a1, a2) => CreatePostScreen(),
                 settings: settings);
-          case ROUTES.CREATE_POST_SCREEN:
+          case ROUTES.IDENTITY:
             return PageRouteBuilder(
-                pageBuilder: (_, a1, a2) => Identity(),
+                pageBuilder: (_, a1, a2) => Identity(), settings: settings);
+          case ROUTES.COMMUNICATION_REGISTRATION:
+            return PageRouteBuilder(
+                pageBuilder: (_, a1, a2) => CommunityRegistration(),
                 settings: settings);
-      
+          case ROUTES.DOCTOR_REGIS_COMPLETE:
+            return PageRouteBuilder(
+                pageBuilder: (_, a1, a2) => VerifyIdenityComplete(),
+                settings: settings);
 
           default:
             return CustomPageRoute.build(
