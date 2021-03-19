@@ -4,9 +4,9 @@ import 'package:flutter/services.dart';
 import 'package:solution_challenge/UI/views/communityRegistrationScreen/communityRegistration.dart';
 import 'package:solution_challenge/UI/views/communityRegistrationScreen/enterSymptomsScreen.dart';
 import 'package:solution_challenge/UI/views/communityRegistrationScreen/communityDescription.dart';
-import 'package:solution_challenge/UI/views/doctorRegistration/verifyIdentityComplete.dart';
+import 'package:solution_challenge/UI/views/doctorRegistration/verificationComplete.dart';
 import 'package:solution_challenge/UI/views/onboardingScreen/onboarding.dart';
-import 'package:solution_challenge/UI/views/doctorRegistration/Identity.dart';
+import 'package:solution_challenge/UI/views/doctorRegistration/doctorVerification.dart';
 import 'package:solution_challenge/utils/custom_shared_preferences.dart';
 import 'UI/views/afterSplashScreen/afterSplashScreen.dart';
 import 'UI/views/authScreen/authScreen.dart';
@@ -100,14 +100,15 @@ class App extends StatelessWidget {
                 settings: settings);
           case ROUTES.IDENTITY:
             return PageRouteBuilder(
-                pageBuilder: (_, a1, a2) => Identity(), settings: settings);
+                pageBuilder: (_, a1, a2) => DoctorVerification(),
+                settings: settings);
           case ROUTES.COMMUNICATION_REGISTRATION:
             return PageRouteBuilder(
                 pageBuilder: (_, a1, a2) => CommunityRegistration(),
                 settings: settings);
           case ROUTES.DOCTOR_REGIS_COMPLETE:
             return PageRouteBuilder(
-                pageBuilder: (_, a1, a2) => VerifyIdenityComplete(),
+                pageBuilder: (_, a1, a2) => VerificationComplete(),
                 settings: settings);
           default:
             return CustomPageRoute.build(

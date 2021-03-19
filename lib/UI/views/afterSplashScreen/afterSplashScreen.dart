@@ -18,7 +18,7 @@ class AfterSplashScreen extends StatelessWidget {
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
-                    Image.asset(Assets.logo),
+                    Image.asset(Assets.klogo),
                     Text(
                       "DREAVE",
                       style: TextStyle(
@@ -30,13 +30,13 @@ class AfterSplashScreen extends StatelessWidget {
                       height: 30,
                     ),
                     Image.asset(
-                      Assets.marginalia,
+                      Assets.kMarginalia,
                     ),
                     SizedBox(
                       height: 16,
                     ),
                     Image.asset(
-                      Assets.dashIcon,
+                      Assets.kDashIcon,
                     ),
                   ],
                 ),

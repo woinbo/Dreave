@@ -9,11 +9,11 @@ class CommunityDescription extends StatelessWidget {
       appBar: AppBar(
         elevation: 0,
         leading: Image.asset(
-          Assets.backIcon,
+          Assets.kBackIcon,
           scale: 1.5,
         ),
         title: Image.asset(
-          Assets.logo,
+          Assets.klogo,
           scale: 36,
         ),
         centerTitle: true,

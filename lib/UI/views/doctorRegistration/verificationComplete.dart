@@ -1,23 +1,23 @@
 import 'package:flutter/material.dart';
 import 'package:solution_challenge/config/assets.dart';
 
-class VerifyIdenityComplete extends StatefulWidget {
+class VerificationComplete extends StatefulWidget {
   @override
-  _VerifyIdenityComplete createState() => _VerifyIdenityComplete();
+  _VerificationComplete createState() => _VerificationComplete();
 }
 
-class _VerifyIdenityComplete extends State<VerifyIdenityComplete> {
+class _VerificationComplete extends State<VerificationComplete> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         elevation: 0,
         leading: Image.asset(
-          Assets.backIcon,
+          Assets.kBackIcon,
           scale: 1.5,
         ),
         title: Image.asset(
-          Assets.logo,
+          Assets.klogo,
           scale: 36,
         ),
         centerTitle: true,
@@ -56,7 +56,7 @@ class _VerifyIdenityComplete extends State<VerifyIdenityComplete> {
                     Expanded(
                       flex: 4,
                       child: Image.asset(
-                        Assets.kVerify,
+                        Assets.kverified,
                       ),
                     ),
                     Expanded(

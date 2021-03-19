@@ -51,22 +51,19 @@ class _PendingChat extends State<PendingChat> {
       appBar: AppBar(
         elevation: 0,
         leading: Image.asset(
-          Assets.logo,
+          Assets.klogo,
           scale: 1.5,
         ),
         title: Text("COVERSE"),
-        actions: [Image.asset(Assets.kWriter)],
+        actions: [Image.asset(Assets.kProfileEdit)],
         centerTitle: true,
         backgroundColor: Colors.white,
       ),
-      //TODO:ACTIVE
-      //SLIDING BUTTON
-
       body: SafeArea(
         child: Column(
           children: [
             Expanded(
-              flex:8,
+              flex: 8,
               child: Scrollbar(
                 child: ListView.builder(
                   reverse: false,
@@ -147,25 +144,32 @@ class _PendingChat extends State<PendingChat> {
         ),
       ),
       bottomNavigationBar: Container(
-         height: 65,
-                decoration: BoxDecoration(
-                    color: Color(0xff2AA4F4).withOpacity(0.2),
-                    borderRadius: BorderRadius.only(
-                        topLeft: Radius.circular(45),
-                        topRight: Radius.circular(45))),
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceAround,
-                          children: [
-                           IconButton(icon: Icon(Icons.home_outlined,color: Color(0xff2AA4F4)), onPressed: null,iconSize: 40,),
-                           IconButton(icon: Icon(FontAwesomeIcons.telegramPlane,color: Color(0xff2AA4F4)),onPressed: null,iconSize: 32,),
-                          ],
-
-                        )         
-            ),
+          height: 65,
+          decoration: BoxDecoration(
+              color: Color(0xff2AA4F4).withOpacity(0.2),
+              borderRadius: BorderRadius.only(
+                  topLeft: Radius.circular(45), topRight: Radius.circular(45))),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
+            children: [
+              IconButton(
+                icon: Icon(Icons.home_outlined, color: Color(0xff2AA4F4)),
+                onPressed: null,
+                iconSize: 40,
+              ),
+              IconButton(
+                icon: Icon(FontAwesomeIcons.telegramPlane,
+                    color: Color(0xff2AA4F4)),
+                onPressed: null,
+                iconSize: 32,
+              ),
+            ],
+          )),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       floatingActionButton: FloatingActionButton(
-        backgroundColor:Color(0xff155CDE),
-        child:Icon(FontAwesomeIcons.plus,color:Color(0xffFFFFFF)),onPressed: null,
+        backgroundColor: Color(0xff155CDE),
+        child: Icon(FontAwesomeIcons.plus, color: Color(0xffFFFFFF)),
+        onPressed: null,
       ),
     );
   }

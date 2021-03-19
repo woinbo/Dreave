@@ -17,19 +17,19 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
   List<_SliderModel> mySlides = <_SliderModel>[
     _SliderModel(
       imageAssetPath: Image.asset(
-        Assets.search,
+        Assets.kOnBoardingSearch,
         scale: 1,
       ),
       title: 'Search',
       desc: 'Search for the community **',
     ),
     _SliderModel(
-      imageAssetPath: Image.asset(Assets.communicate),
+      imageAssetPath: Image.asset(Assets.kCommunicate),
       title: 'Join Commnunity',
       desc: 'You are ready to get started \nwith the community',
     ),
     _SliderModel(
-      imageAssetPath: Image.asset(Assets.connect),
+      imageAssetPath: Image.asset(Assets.kConnect),
       title: 'Connect with people',
       desc: 'Connect with the community **',
     ),
@@ -48,18 +48,6 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
     // autoSlide();
     super.initState();
   }
-
-  // int? _slideIndex = 0;
-
-  // autoSlide() async {
-  //   Timer(Duration(seconds: 3), () {
-  //     setState(() {
-  //       slideIndex = slideIndex! + 1;
-  //       controller!.animateToPage(mySlides!.length - slideIndex!,
-  //           duration: Duration(milliseconds: 400), curve: Curves.linear);
-  //     });
-  //   });
-  // }
 
   @override
   Widget build(BuildContext context) {
@@ -168,7 +156,7 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                                 ),
                               ),
                               Image.asset(
-                                Assets.logo,
+                                Assets.klogo,
                                 scale: 26,
                               ),
                               Container(

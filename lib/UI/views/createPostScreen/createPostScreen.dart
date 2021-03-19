@@ -13,7 +13,7 @@ class _CreatePostScreen extends State<CreatePostScreen> {
       appBar: AppBar(
         elevation: 0,
         leading: Image.asset(
-          Assets.backIcon,
+          Assets.kBackIcon,
           scale: 1.5,
         ),
         backgroundColor: Colors.white,

@@ -14,13 +14,12 @@ class _Homeandpost3 extends State<Homeandpost3> {
       appBar: AppBar(
         elevation: 0,
         leading: Image.asset(
-          Assets.backIcon,
+          Assets.kBackIcon,
           scale: 1,
         ),
         actions: [
-
-          SvgPicture.asset("assets/icons/share.svg",height: 50, width: 50),
-          SvgPicture.asset("assets/icons/donate.svg",height: 50, width: 50),
+          SvgPicture.asset("assets/icons/share.svg", height: 50, width: 50),
+          SvgPicture.asset("assets/icons/donate.svg", height: 50, width: 50),
         ],
         backgroundColor: Colors.white,
       ),
@@ -29,7 +28,7 @@ class _Homeandpost3 extends State<Homeandpost3> {
           child: Column(
             children: [
               Expanded(
-                flex:1,
+                flex: 1,
                 child: Row(
                   children: [
                     Expanded(
@@ -62,8 +61,8 @@ class _Homeandpost3 extends State<Homeandpost3> {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Expanded(
-                        flex:2,
-                            child: Column(
+                        flex: 2,
+                        child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           mainAxisAlignment: MainAxisAlignment.start,
                           children: [
@@ -74,7 +73,6 @@ class _Homeandpost3 extends State<Homeandpost3> {
                                 fontWeight: FontWeight.bold,
                               ),
                             ),
-                            
                             Text(
                               "Connect with your Community.",
                               style: TextStyle(
@@ -83,41 +81,39 @@ class _Homeandpost3 extends State<Homeandpost3> {
                                 fontWeight: FontWeight.w500,
                               ),
                             ),
-                            
                           ],
                         ),
                       ),
                       Expanded(
-                        flex:4,
-                      child:SvgPicture.asset(
-                              "assets/images/person.svg",
-                              
-                            ),
+                        flex: 4,
+                        child: SvgPicture.asset(
+                          "assets/images/person.svg",
+                        ),
                       ),
                       Expanded(
-                        flex:1,
-                      child: GestureDetector(
-                        onTap: () {},
-                        child: Container(
-                          padding: EdgeInsets.symmetric(
-                              horizontal: 90, vertical: 16),
-                          decoration: BoxDecoration(
-                            color: Color(0xff2AA4F4),
-                            borderRadius: BorderRadius.all(
-                              Radius.circular(36.0),
+                        flex: 1,
+                        child: GestureDetector(
+                          onTap: () {},
+                          child: Container(
+                            padding: EdgeInsets.symmetric(
+                                horizontal: 90, vertical: 16),
+                            decoration: BoxDecoration(
+                              color: Color(0xff2AA4F4),
+                              borderRadius: BorderRadius.all(
+                                Radius.circular(36.0),
+                              ),
                             ),
-                          ),
-                          child: Text(
-                            "GO BACK",
-                            style: TextStyle(
-                              color: Colors.white,
-                              fontSize: 20,
-                              fontWeight: FontWeight.bold,
-                              letterSpacing: 2,
+                            child: Text(
+                              "GO BACK",
+                              style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 20,
+                                fontWeight: FontWeight.bold,
+                                letterSpacing: 2,
+                              ),
                             ),
                           ),
                         ),
-                      ),
                       ),
                     ],
                   ),

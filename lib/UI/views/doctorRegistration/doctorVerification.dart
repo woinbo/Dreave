@@ -2,23 +2,23 @@ import 'package:flutter/material.dart';
 import 'package:solution_challenge/config/assets.dart';
 import 'package:solution_challenge/config/constant.dart';
 
-class Identity extends StatefulWidget {
+class DoctorVerification extends StatefulWidget {
   @override
-  _Identity createState() => _Identity();
+  _DoctorVerification createState() => _DoctorVerification();
 }
 
-class _Identity extends State<Identity> {
+class _DoctorVerification extends State<DoctorVerification> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         elevation: 0,
         leading: Image.asset(
-          Assets.backIcon,
+          Assets.kBackIcon,
           scale: 1.5,
         ),
         title: Image.asset(
-          Assets.logo,
+          Assets.klogo,
           scale: 36,
         ),
         centerTitle: true,
@@ -58,26 +58,24 @@ class _Identity extends State<Identity> {
               child: Column(
                 children: [
                   Expanded(
-                    flex: 2,
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text(
-                          "Verify your Identify",
-                          style: TextStyle(
-                            fontSize: 34,
-                            fontWeight: FontWeight.bold,
-                            color: Colors.black,
-                          ),
-                        ),
-                        Text(
-                          "Enter the following detail to verify\nyour identity.",
-                          style: TextStyle(
-                            fontSize: 20,
-                            color: Colors.black.withOpacity(0.65),
-                          ),
-                        ),
-                      ],
+                    flex: 1,
+                    child: Text(
+                      "Verify your Identify",
+                      style: TextStyle(
+                        fontSize: 34,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.black,
+                      ),
+                    ),
+                  ),
+                  Padding(
+                    padding: EdgeInsets.symmetric(vertical: 16),
+                    child: Text(
+                      "Enter the following detail to verify\nyour identity.",
+                      style: TextStyle(
+                        fontSize: 20,
+                        color: Colors.black,
+                      ),
                     ),
                   ),
                   Expanded(
@@ -152,6 +150,7 @@ class _Identity extends State<Identity> {
                             width: 0.2,
                           ),
                         ),
+                        suffixIcon: Icon(Icons.camera_alt_outlined),
                         fillColor: Color(0xffFAFAFA),
                         filled: true,
                         hintText: "Upload  Registration Certification",
@@ -161,38 +160,66 @@ class _Identity extends State<Identity> {
                       ),
                     ),
                   ),
-                  Expanded(
-                    child: Text(
-                      "Any other document that you want to upload as proof of identity/doctor.",
-                      style: TextStyle(
-                        fontSize: 13,
-                        fontWeight: FontWeight.bold,
-                        color: Colors.black,
-                      ),
+                  Text(
+                    "Any other document that you want to upload as proof of identity/doctor.",
+                    style: TextStyle(
+                      fontSize: 13,
+                      fontWeight: FontWeight.w300,
+                      color: Color(0xff5E5E5E),
                     ),
                   ),
                   Expanded(
                     flex: 1,
-                    child: GestureDetector(
-                      onTap: () {},
-                      child: Container(
-                          padding: EdgeInsets.symmetric(
-                              horizontal: 90, vertical: 16),
-                          decoration: BoxDecoration(
-                            color: Color(0xff2AA4F4),
-                            borderRadius: BorderRadius.all(
-                              Radius.circular(36.0),
+                    child: Row(
+                      children: [
+                        Expanded(
+                          child: GestureDetector(
+                            onTap: () {},
+                            child: Container(
+                              decoration: BoxDecoration(
+                                color: Colors.white,
+                                borderRadius: BorderRadius.all(
+                                  Radius.circular(7.0),
+                                ),
+                              ),
+                              padding: EdgeInsets.symmetric(vertical: 16),
+                              margin: EdgeInsets.only(right: 2.5),
+                              child: Icon(
+                                Icons.file_upload,
+                              ),
                             ),
+                            //Image.asset(Assets.kUpload)),
                           ),
-                          child: Image.asset(Assets.kUpload)),
+                        ),
+                        Expanded(
+                          child: GestureDetector(
+                            onTap: () {},
+                            child: Container(
+                              decoration: BoxDecoration(
+                                color: Colors.white,
+                                borderRadius: BorderRadius.all(
+                                  Radius.circular(7.0),
+                                ),
+                              ),
+                              padding: EdgeInsets.symmetric(vertical: 16),
+                              margin: EdgeInsets.only(left: 2.5),
+                              child: Icon(
+                                Icons.file_upload,
+                              ),
+                            ),
+                            //Image.asset(Assets.kUpload)),
+                          ),
+                        ),
+                      ],
                     ),
                   ),
                   Expanded(
                     child: Text(
-                      "* If your verification is succesful you will\nreceive a confirmation mail.",
+                      "* If your verification is succesful you will receive a confirmation mail.",
+                      textAlign: TextAlign.start,
                       style: TextStyle(
                         fontSize: 13,
-                        fontWeight: FontWeight.bold,
+                        fontWeight: FontWeight.w300,
                         color: Colors.black,
                       ),
                     ),
@@ -205,20 +232,18 @@ class _Identity extends State<Identity> {
                             context, ROUTES.DOCTOR_REGIS_COMPLETE);
                       },
                       child: Container(
-                        padding:
-                            EdgeInsets.symmetric(horizontal: 90, vertical: 16),
                         decoration: BoxDecoration(
                           color: Color(0xff2AA4F4),
                           borderRadius: BorderRadius.all(
-                            Radius.circular(36.0),
+                            Radius.circular(7.0),
                           ),
                         ),
                         child: Center(
                           child: Text(
-                            "Verify",
+                            "VERIFY",
                             style: TextStyle(
                               color: Colors.white,
-                              fontSize: 16,
+                              fontSize: 25,
                               fontWeight: FontWeight.bold,
                               letterSpacing: 2,
                             ),
