@@ -24,7 +24,7 @@ dependencies:
   flutter_slidable: ^0.5.7
   numeric_keyboard: ^1.1.0
   pinput: ^1.2.0
-  
+  like_button: ^2.0.1
   
 dev_dependencies:
   flutter_test:

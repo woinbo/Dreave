@@ -1,12 +1,15 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:solution_challenge/UI/views/Chat/chattingWindow.dart';
+import 'package:solution_challenge/UI/views/Chat/userChatList.dart';
 import 'package:solution_challenge/UI/views/communityRegistrationScreen/communityRegistration.dart';
 import 'package:solution_challenge/UI/views/communityRegistrationScreen/enterSymptomsScreen.dart';
 import 'package:solution_challenge/UI/views/communityRegistrationScreen/communityDescription.dart';
 import 'package:solution_challenge/UI/views/doctorRegistration/verificationComplete.dart';
 import 'package:solution_challenge/UI/views/onboardingScreen/onboarding.dart';
 import 'package:solution_challenge/UI/views/doctorRegistration/doctorVerification.dart';
+import 'package:solution_challenge/UI/views/postScreen/createPost.dart';
 import 'package:solution_challenge/utils/custom_shared_preferences.dart';
 import 'UI/views/afterSplashScreen/afterSplashScreen.dart';
 import 'UI/views/authScreen/authScreen.dart';
@@ -110,6 +113,22 @@ class App extends StatelessWidget {
             return PageRouteBuilder(
                 pageBuilder: (_, a1, a2) => VerificationComplete(),
                 settings: settings);
+          case ROUTES.CHATTING:
+            return PageRouteBuilder(
+              pageBuilder: (_, a1, a2) => Chatting(),
+              settings: settings,
+            );
+          case ROUTES.CREATE_POST:
+            return PageRouteBuilder(
+              pageBuilder: (_, a1, a2) => CreatePost(),
+              settings: settings,
+            );
+          case ROUTES.PENDING_CHAT:
+            return PageRouteBuilder(
+              pageBuilder: (_, a1, a2) => UserChatList(),
+              settings: settings,
+            );
+
           default:
             return CustomPageRoute.build(
                 builder: (_) => AfterSplashScreen(), settings: settings);

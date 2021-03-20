@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:solution_challenge/config/assets.dart';
+import 'package:solution_challenge/config/constant.dart';
 
 class VerificationComplete extends StatefulWidget {
   @override
@@ -14,7 +15,7 @@ class _VerificationComplete extends State<VerificationComplete> {
         elevation: 0,
         leading: Image.asset(
           Assets.kBackIcon,
-          scale: 1.5,
+          scale: 5,
         ),
         title: Image.asset(
           Assets.klogo,
@@ -38,7 +39,7 @@ class _VerificationComplete extends State<VerificationComplete> {
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               Expanded(
-                flex: 1,
+                flex: 2,
                 child: Text(
                   "Verify your Identity",
                   style: TextStyle(
@@ -56,7 +57,7 @@ class _VerificationComplete extends State<VerificationComplete> {
                     Expanded(
                       flex: 4,
                       child: Image.asset(
-                        Assets.kverified,
+                        Assets.kdocUploaded,
                       ),
                     ),
                     Expanded(
@@ -90,7 +91,9 @@ class _VerificationComplete extends State<VerificationComplete> {
               Expanded(
                 flex: 1,
                 child: GestureDetector(
-                  onTap: () {},
+                  onTap: () {
+                    Navigator.pushNamed(context, ROUTES.HOME);
+                  },
                   child: Container(
                     margin:
                         EdgeInsets.symmetric(horizontal: 24.0, vertical: 42.0),
@@ -103,7 +106,7 @@ class _VerificationComplete extends State<VerificationComplete> {
                     ),
                     child: Center(
                       child: Text(
-                        "Retry",
+                        "CONTINUE",
                         style: TextStyle(
                           color: Colors.white,
                           fontSize: 16,

@@ -127,7 +127,10 @@ class _EnterSymptomsState extends State<EnterSymptoms> {
                                 isHavingData = !isHavingData;
                               });
                             },
-                            child: Image.asset(Assets.kSearchMore),
+                            child: Image.asset(
+                              Assets.kSearchMore,
+                              scale: 3.0,
+                            ),
                           ),
                         ),
                       ],

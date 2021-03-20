@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:solution_challenge/config/assets.dart';
 
 const String title = 'DREAVE';
 const Color primaryColor = Color(0xffD1E7F8);
@@ -21,4 +22,7 @@ class ROUTES {
   static const String COMMUNICATION_REGISTRATION =
       "/communityRegistrationScreen";
   static const String DOCTOR_REGIS_COMPLETE = "/verifyIdenityComplete";
+  static const String CHATTING = "/Chatting";
+  static const String PENDING_CHAT = "/PendingChat";
+  static const String CREATE_POST = "/CreatePost";
 }
