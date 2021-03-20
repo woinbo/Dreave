@@ -56,7 +56,7 @@ class _AuthScreenState extends State<AuthScreen>
               ),
             ),
             Expanded(
-              flex: _tabController.index == 1 ? 9 : 8,
+              flex: _tabController.index == 1 ? 10 : 8,
               child: Container(
                 padding: EdgeInsets.symmetric(horizontal: 22, vertical: 22),
                 child: Column(
