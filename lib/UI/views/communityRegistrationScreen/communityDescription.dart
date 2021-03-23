@@ -58,7 +58,7 @@ class CommunityDescription extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
-                          "Welcome to the Dreave.",
+                          "Welcome to the Community.",
                           style: TextStyle(
                             fontSize: 34,
                             fontWeight: FontWeight.bold,

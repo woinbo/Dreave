@@ -50,9 +50,12 @@ class _AuthScreenState extends State<AuthScreen>
           children: [
             Expanded(
               flex: 2,
-              child: Image.asset(
-                Assets.klogo,
-                scale: 16,
+              child: Hero(
+                tag: "logo",
+                child: Image.asset(
+                  Assets.klogo,
+                  scale: 16,
+                ),
               ),
             ),
             Expanded(
@@ -260,77 +263,84 @@ class _AuthScreenState extends State<AuthScreen>
             ),
             Expanded(
               flex: 2,
-              child: Stack(
-                children: [
-                  Positioned(
-                    child: AnimatedContainer(
-                      duration: Duration(seconds: 3),
-                      decoration: BoxDecoration(
-                        border: Border.all(
-                          color: Color(0xff2455EF),
-                          width: 3,
-                        ),
-                        borderRadius: BorderRadius.only(
-                          topLeft: Radius.circular(40.0),
-                          topRight: Radius.circular(40.0),
-                        ),
-                      ),
-                      width: _tabController.index == 1
-                          ? MediaQuery.of(context).size.width * 10 / 10
-                          : MediaQuery.of(context).size.width * 5.8 / 10,
-                    ),
-                  ),
-                  Container(
-                    margin: EdgeInsets.only(top: 3),
-                    width: MediaQuery.of(context).size.width,
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.only(
-                        topRight: Radius.circular(40.0),
-                        topLeft: Radius.circular(40.0),
-                      ),
-                      color: Color(0xffD1E7F8),
-                    ),
-                    child: Center(
-                      child: GestureDetector(
-                        onTap: () {
-                          //   if (_nameContoller.text == "8445377229") {
-                          //     _authController.phoneAuth(_nameContoller.text);
-                          //   } else
-                          //     _authController.createAccountWithEmailAndPassword(
-                          //         _nameContoller.text, _passwordContoller.text);
-                          setState(() {
-                            _tabController.index == 1
-                                ? Navigator.pushNamed(context, ROUTES.ENTER_SYM)
-                                : _tabController.animateTo(1);
-                          });
-                        },
-                        child: Container(
-                          margin: MediaQuery.of(context).viewInsets.bottom == 0
-                              ? EdgeInsets.symmetric(
-                                  horizontal: 40, vertical: 30)
-                              : EdgeInsets.symmetric(
-                                  horizontal: 40, vertical: 10),
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.all(
-                              Radius.circular(10.0),
-                            ),
-                            color: Color(0xff2AA4F4),
+              child: Hero(
+                tag: "box",
+                child: Stack(
+                  children: [
+                    Positioned(
+                      child: AnimatedContainer(
+                        duration: Duration(seconds: 3),
+                        decoration: BoxDecoration(
+                          border: Border.all(
+                            color: Color(0xff2455EF),
+                            width: 3,
                           ),
-                          child: Center(
-                            child: Text(
-                              _tabController.index == 1 ? "VERIFY" : "NEXT >>",
-                              style: TextStyle(
-                                color: Colors.white,
-                                fontSize: 18,
-                                fontWeight: FontWeight.w600,
+                          borderRadius: BorderRadius.only(
+                            topLeft: Radius.circular(40.0),
+                            topRight: Radius.circular(40.0),
+                          ),
+                        ),
+                        width: _tabController.index == 1
+                            ? MediaQuery.of(context).size.width * 10 / 10
+                            : MediaQuery.of(context).size.width * 5.8 / 10,
+                      ),
+                    ),
+                    Container(
+                      margin: EdgeInsets.only(top: 3),
+                      width: MediaQuery.of(context).size.width,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.only(
+                          topRight: Radius.circular(40.0),
+                          topLeft: Radius.circular(40.0),
+                        ),
+                        color: Color(0xffD1E7F8),
+                      ),
+                      child: Center(
+                        child: GestureDetector(
+                          onTap: () {
+                            //   if (_nameContoller.text == "8445377229") {
+                            //     _authController.phoneAuth(_nameContoller.text);
+                            //   } else
+                            //     _authController.createAccountWithEmailAndPassword(
+                            //         _nameContoller.text, _passwordContoller.text);
+                            setState(() {
+                              _tabController.index == 1
+                                  ? Navigator.pushNamed(
+                                      context, ROUTES.ENTER_SYM)
+                                  : _tabController.animateTo(1);
+                            });
+                          },
+                          child: Container(
+                            margin:
+                                MediaQuery.of(context).viewInsets.bottom == 0
+                                    ? EdgeInsets.symmetric(
+                                        horizontal: 40, vertical: 30)
+                                    : EdgeInsets.symmetric(
+                                        horizontal: 40, vertical: 10),
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.all(
+                                Radius.circular(10.0),
+                              ),
+                              color: Color(0xff2AA4F4),
+                            ),
+                            child: Center(
+                              child: Text(
+                                _tabController.index == 1
+                                    ? "VERIFY"
+                                    : "NEXT >>",
+                                style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 18,
+                                  fontWeight: FontWeight.w600,
+                                ),
                               ),
                             ),
                           ),
                         ),
                       ),
                     ),
-                  ),
-                ],
+                  ],
+                ),
               ),
             ),
           ],

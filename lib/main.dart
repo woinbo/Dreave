@@ -23,9 +23,11 @@ bool isFirstTime;
 
 void main() async => {
       WidgetsFlutterBinding.ensureInitialized(),
-      await Firebase.initializeApp(),
-      isFirstTime = await CustomSharedPreferences.get(IS_FIRST_TIME) ?? true,
-      isLoggedIn = await CustomSharedPreferences.get(IS_LOGGED_IN) ?? false,
+      await Firebase.initializeApp(), // Firebase Initialization
+      isFirstTime = await CustomSharedPreferences.get(IS_FIRST_TIME) ??
+          true, // check if user is opened the app for the first time
+      isLoggedIn = await CustomSharedPreferences.get(IS_LOGGED_IN) ??
+          false, // check if already login
       runApp(
         App(),
       ),
@@ -46,31 +48,8 @@ class App extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: title,
       theme: ThemeData(
-        primaryColor: primaryColor,
-        accentColor: primaryColor,
         scaffoldBackgroundColor: Colors.white,
-        appBarTheme: AppBarTheme().copyWith(
-          iconTheme: IconThemeData(color: Colors.black),
-          textTheme: TextTheme().copyWith(
-            headline6: Theme.of(context).primaryTextTheme.headline6.copyWith(
-                  color: Colors.black,
-                ),
-          ),
-        ),
-        textTheme: TextTheme(
-          headline1: TextStyle(
-            fontSize: 72.0,
-            fontWeight: FontWeight.bold,
-          ),
-          headline6: TextStyle(
-            fontSize: 36.0,
-            fontStyle: FontStyle.italic,
-          ),
-          bodyText2: TextStyle(
-            fontSize: 14.0,
-            fontFamily: "Roboto",
-          ),
-        ),
+        fontFamily: "Roboto",
       ),
       initialRoute: isFirstTime
           ? ROUTES.INITIAL

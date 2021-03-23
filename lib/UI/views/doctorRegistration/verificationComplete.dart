@@ -39,7 +39,7 @@ class _VerificationComplete extends State<VerificationComplete> {
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               Expanded(
-                flex: 2,
+                flex: 1,
                 child: Text(
                   "Verify your Identity",
                   style: TextStyle(
@@ -50,12 +50,12 @@ class _VerificationComplete extends State<VerificationComplete> {
                 ),
               ),
               Expanded(
-                flex: 2,
+                flex: 7,
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
                     Expanded(
-                      flex: 4,
+                      flex: 2,
                       child: Image.asset(
                         Assets.kdocUploaded,
                       ),
@@ -86,36 +86,6 @@ class _VerificationComplete extends State<VerificationComplete> {
                       ),
                     ),
                   ],
-                ),
-              ),
-              Expanded(
-                flex: 1,
-                child: GestureDetector(
-                  onTap: () {
-                    Navigator.pushNamed(context, ROUTES.HOME);
-                  },
-                  child: Container(
-                    margin:
-                        EdgeInsets.symmetric(horizontal: 24.0, vertical: 42.0),
-                    padding: EdgeInsets.symmetric(horizontal: 40, vertical: 0),
-                    decoration: BoxDecoration(
-                      color: Color(0xff2AA4F4),
-                      borderRadius: BorderRadius.all(
-                        Radius.circular(12.0),
-                      ),
-                    ),
-                    child: Center(
-                      child: Text(
-                        "CONTINUE",
-                        style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 16,
-                          fontWeight: FontWeight.bold,
-                          letterSpacing: 2,
-                        ),
-                      ),
-                    ),
-                  ),
                 ),
               ),
             ],

@@ -80,7 +80,8 @@ class CommunityRegistration extends StatelessWidget {
                             style: TextStyle(fontSize: 15),
                           ),
                           TextButton(
-                            onPressed: () {},
+                            onPressed: () =>
+                                Navigator.pushNamed(context, ROUTES.HOME),
                             child: Container(
                               width: MediaQuery.of(context).size.width,
                               padding: EdgeInsets.symmetric(vertical: 16),
@@ -114,9 +115,8 @@ class CommunityRegistration extends StatelessWidget {
                             style: TextStyle(fontSize: 15),
                           ),
                           TextButton(
-                            onPressed: () {
-                              Navigator.pushNamed(context, ROUTES.IDENTITY);
-                            },
+                            onPressed: () =>
+                                Navigator.pushNamed(context, ROUTES.IDENTITY),
                             child: Container(
                               width: MediaQuery.of(context).size.width,
                               padding: EdgeInsets.symmetric(vertical: 16),
@@ -150,7 +150,8 @@ class CommunityRegistration extends StatelessWidget {
                             style: TextStyle(fontSize: 15),
                           ),
                           TextButton(
-                            onPressed: () {},
+                            onPressed: () =>
+                                Navigator.pushNamed(context, ROUTES.HOME),
                             child: Container(
                               width: MediaQuery.of(context).size.width,
                               padding: EdgeInsets.symmetric(vertical: 16),
