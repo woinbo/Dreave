@@ -8,8 +8,8 @@
 </p>
 
 <p align="center">
-  An Application made using flutter for Solution Challenge 2021.
-  Made for the community of people suffering through a rare disease.
+  An Application developed using flutter for Solution Challenge 2021.
+  Made for the community of people suffering through  rare diseases.
 </p>
 
 <p align="center">
