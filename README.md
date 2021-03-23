@@ -51,13 +51,13 @@ We have made this application with the help of Flutter and FireBase. The Aim of 
      <summary> Click to expand </summary>
   
   
-  Welcome Page               |  Login Page               | Signup Page               |  Forgot Password Page
+ Welcome Page               |  Login Page               | Signup Page               |  Forgot Password Page
 :-------------------------:|:-------------------------:|:-------------------------:|:-------------------------:
-![](https://github.com/woinbo/Dreave/blob/main/images/Screen2.png)|![](https://github.com/TheAlphamerc/flutter_twitter_clone/blob/master/screenshots/Auth/screenshot_2.jpg?raw=true)|![](https://github.com/TheAlphamerc/flutter_twitter_clone/blob/master/screenshots/Auth/screenshot_3.jpg?raw=true)|![](https://github.com/TheAlphamerc/flutter_twitter_clone/blob/master/screenshots/Auth/screenshot_4.jpg?raw=true)|
+![](https://raw.githubusercontent.com/woinbo/Dreave/main/images/Screen2.png)|![](https://raw.githubusercontent.com/woinbo/Dreave/main/images/Screen3.png)|![](https://raw.githubusercontent.com/woinbo/Dreave/main/images/Screen4.png)|![](https://raw.githubusercontent.com/woinbo/Dreave/main/images/Screen5.png)|
 
 Home Page Sidebaar         |  Home Page       |   Home Page               |  Home Page
 :-------------------------:|:-------------------------:|:-------------------------:|:-------------------------:
-![](https://github.com/TheAlphamerc/flutter_twitter_clone/blob/master/screenshots/Home/screenshot_5.jpg?raw=true)|![](https://github.com/TheAlphamerc/flutter_twitter_clone/blob/master/screenshots/Home/screenshot_2.jpg?raw=true)|![](https://github.com/TheAlphamerc/flutter_twitter_clone/blob/master/screenshots/Home/screenshot_7.jpg?raw=true)|![](https://github.com/TheAlphamerc/flutter_twitter_clone/blob/master/screenshots/Home/screenshot_6.jpg?raw=true)|
+![](https://raw.githubusercontent.com/woinbo/Dreave/main/images/Screen6.png)|![](https://raw.githubusercontent.com/woinbo/Dreave/main/images/Screen9.png)|![](https://raw.githubusercontent.com/woinbo/Dreave/main/images/Screen11.png)|![](https://raw.githubusercontent.com/woinbo/Dreave/main/images/Screen12.png)|
   
   </details>
 
