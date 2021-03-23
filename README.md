@@ -34,9 +34,30 @@
 ## Introduction
 
 [![All Contributors](https://img.shields.io/badge/all_contributors-4-orange.svg?style=flat-square)](./Contributors.md)
+[![Gitter chat](https://img.shields.io/badge/chat-on_gitter-008080.svg?style=flat-square)](https://gitter.im/git-point)
+
+We have made this application with the help of Flutter and FireBase. The Aim of this app is to build a strong community of people who are suffering from rare disease and feel left alone in the society.
 
 
 **Available for both iOS and Android.**
+
+<p align="center">
+  <img src = "http://i.imgur.com/HowF6aM.png" width=350>
+</p>
+
+## Features
+
+A few of the things you can do with Dreaven 
+
+* Tell the symptoms of your disease and we will tell you which disease you are suffering through 
+* Join the community where you can connect with people who are like you 
+* Get advice from World Class Doctors, who work in WHO for human welfare
+* Get the community support
+* Give your personal views on the basis of your experience
+
+
+
+
 
 
 
