@@ -45,6 +45,23 @@ We have made this application with the help of Flutter and FireBase. The Aim of 
   <img src = "images/Screen1.png" width=350>
 </p>
 
+
+## Screenshots
+<details>
+     <summary> Click to expand </summary>
+  
+  
+  Welcome Page               |  Login Page               | Signup Page               |  Forgot Password Page
+:-------------------------:|:-------------------------:|:-------------------------:|:-------------------------:
+![](https://github.com/woinbo/Dreave/blob/main/images/Screen2.png)|![](https://github.com/TheAlphamerc/flutter_twitter_clone/blob/master/screenshots/Auth/screenshot_2.jpg?raw=true)|![](https://github.com/TheAlphamerc/flutter_twitter_clone/blob/master/screenshots/Auth/screenshot_3.jpg?raw=true)|![](https://github.com/TheAlphamerc/flutter_twitter_clone/blob/master/screenshots/Auth/screenshot_4.jpg?raw=true)|
+
+Home Page Sidebaar         |  Home Page       |   Home Page               |  Home Page
+:-------------------------:|:-------------------------:|:-------------------------:|:-------------------------:
+![](https://github.com/TheAlphamerc/flutter_twitter_clone/blob/master/screenshots/Home/screenshot_5.jpg?raw=true)|![](https://github.com/TheAlphamerc/flutter_twitter_clone/blob/master/screenshots/Home/screenshot_2.jpg?raw=true)|![](https://github.com/TheAlphamerc/flutter_twitter_clone/blob/master/screenshots/Home/screenshot_7.jpg?raw=true)|![](https://github.com/TheAlphamerc/flutter_twitter_clone/blob/master/screenshots/Home/screenshot_6.jpg?raw=true)|
+  
+  </details>
+
+
 ## Features
 
 A few of the things you can do with Dreaven 
