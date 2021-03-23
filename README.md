@@ -3,7 +3,7 @@
 
 <p align="center">
   <a href="https://github.com/woinbo/Dreave">
-    <img alt="Dreave" title="Dreave" src="DREAVE.png" width="450">
+    <img alt="Dreave" title="Dreave" src="DREAVE.svg" width="450">
   </a>
 </p>
 
