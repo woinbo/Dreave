@@ -56,7 +56,41 @@ A few of the things you can do with Dreaven
 * Give your personal views on the basis of your experience
 
 
+## Feedback
 
+Feel free to send us feedback on [Survey-Form](https://7f0wxfgih3r.typeform.com/to/GnCAQY7G) or [file an issue](https://github.com/gitpoint/Dreave/issues/new). Feature requests are always welcome. If you wish to contribute, please take a quick look at the [guidelines](./CONTRIBUTING.md)!
+
+If there's anything you'd like to chat about, please feel free to join our [Gitter chat](https://gitter.im/git-point)!
+
+## Contributors
+
+This project follows the  specification and is brought to you by these [awesome contributors](./Contributors.md).
+
+## Build Process
+
+**Step 1:**
+
+Download or clone this repo by using the link below:
+
+```
+https://github.com/woinbo/Dreave
+```
+
+**Step 2:**
+
+Go to project root and execute the following command in console to get the required packages: 
+
+```console
+flutter pub get 
+```
+
+**Step 3:**
+
+To run this project:
+
+```
+flutter run
+```
 
 
 
