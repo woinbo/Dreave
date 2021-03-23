@@ -42,7 +42,7 @@ We have made this application with the help of Flutter and FireBase. The Aim of 
 **Available for both iOS and Android.**
 
 <p align="center">
-  <img src = "http://i.imgur.com/HowF6aM.png" width=350>
+  <img src = "MockUp.svg" width=350>
 </p>
 
 ## Features
