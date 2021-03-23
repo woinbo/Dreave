@@ -31,5 +31,12 @@
 - [Contributors](#contributors)
 - [Build Process](#build-process)
 
+## Introduction
+
+[![All Contributors](https://img.shields.io/badge/all_contributors-73-orange.svg?style=flat-square)](./Contributors.md)
+
+
+**Available for both iOS and Android.**
+
 
 
