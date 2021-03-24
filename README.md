@@ -51,18 +51,18 @@ We have made this application with the help of Flutter and FireBase. The Aim of 
      <summary> Click to expand </summary>
   
   
- Welcome Page               |  Login Page               | Search           |  Profession Selection
+ Welcome Page               |  Login Page               | Search           |  Profile Selection
 :-------------------------:|:-------------------------:|:-------------------------:|:-------------------------:
 ![](https://github.com/woinbo/Dreave/blob/main/images/Screen2.png)|![](https://github.com/woinbo/Dreave/blob/main/images/Screen3.png)|![](https://github.com/woinbo/Dreave/blob/main/images/Screen4.png)|![](https://github.com/woinbo/Dreave/blob/main/images/Screen6.png)|
 
-Symbtoms Page         | Welcome to post screen       |  Post Screen             | Personal Experince
+Symptoms Page         | Welcome to Home screen       |  Home Screen             | Personal Experience
 :-------------------------:|:-------------------------:|:-------------------------:|:-------------------------:
 ![](https://github.com/woinbo/Dreave/blob/main/images/Screen5.png)|![](https://github.com/woinbo/Dreave/blob/main/images/Screen8.png)|![](https://github.com/woinbo/Dreave/blob/main/images/Screen1.png)|![](https://github.com/woinbo/Dreave/blob/main/images/Screen10.png)|
 
 
-Chatting Window       | Pending Request      |  Donation Request           | Donation History
+Chatting Window       | Donor HomeScreen      |  Request Screen          | Pending Request
 :-------------------------:|:-------------------------:|:-------------------------:|:-------------------------:
-![](https://github.com/woinbo/Dreave/blob/main/images/Screen9.png)|![](https://github.com/woinbo/Dreave/blob/main/images/Screen12.png)|![](https://github.com/woinbo/Dreave/blob/main/images/Screen13.png)|![](https://github.com/woinbo/Dreave/blob/main/images/Screen11.png)|
+![](https://github.com/woinbo/Dreave/blob/main/images/Screen9.png)|![](https://github.com/woinbo/Dreave/blob/main/images/Screen11.png)|![](https://github.com/woinbo/Dreave/blob/main/images/Screen13.png)|![](https://github.com/woinbo/Dreave/blob/main/images/Screen12.png)|
   
   </details>
 
