@@ -23,7 +23,7 @@
 </p>
 
 
-## Table of Content 
+## Table of Contents 
 
 - [Introduction](#introduction)
 - [Features](#features)
