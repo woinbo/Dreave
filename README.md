@@ -7,6 +7,10 @@
   </a>
 </p>
 
+<a href=""><h3 align="center">Video Demo of the app in action</h4></a>
+
+<a href=""><h4 align="center">Download the APK here</h4></a>
+
 <p align="center">
   An Application developed using flutter for Solution Challenge 2021.
   Made for the community of people suffering through  rare diseases.
