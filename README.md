@@ -89,31 +89,40 @@ If there's anything you'd like to chat about, please feel free to join our [Gitt
 
 This project follows the  specification and is brought to you by these [awesome contributors](./Contributors.md).
 
+
+
+# Tech Stack
+
+Our tech stack consists of the following:
+
+* **Flutter** (cross-platform app development framework)
+  
+* **Auth0** (for user authentication)
+  
+* **Firebase Cloud Firestore** (for storing app data and user information)
+
+
+
 ## Build Process
 
-**Step 1:**
-
-Download or clone this repo by using the link below:
+* **Clone** the project:
 
 ```
 https://github.com/woinbo/Dreave
 ```
 
-**Step 2:**
-
-Go to project root and execute the following command in console to get the required packages: 
+* Setup **Flutter** on your system following the guide [here](https://flutter.dev/docs/get-started/install). 
 
 ```console
 flutter pub get 
 ```
 
-**Step 3:**
 
-To run this project:
-
-```
-flutter run
-```
+* Now, you have successfully completed the setup. Run it by using the following command:
+  
+  ```bash
+  flutter run
+  ```
 
 
 ## Acknowledgments
