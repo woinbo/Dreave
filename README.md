@@ -1,3 +1,5 @@
+[![All Contributors](https://img.shields.io/badge/all_contributors-4-orange.svg?style=flat-square)](./Contributors.md)
+[![Gitter](https://badges.gitter.im/Dreave-App/community.svg)](https://gitter.im/Dreave-App/community?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
 <h1 align="center"> Dreave </h1> <br>
 
 
@@ -11,20 +13,16 @@
 
 <a href=""><h4 align="center">Download the APK here</h4></a>
 
-<p align="center">
-  An Application developed using flutter for Solution Challenge 2021.
-  Made for the community of people suffering through  rare diseases.
-</p>
 
-<p align="center">
-  <a href="https://itunes.apple.com/us/app/gitpoint/id1251245162?mt=8">
-    <img alt="Download on the App Store" title="App Store" src="http://i.imgur.com/0n2zqHD.png" width="140">
-  </a>
+**Dreave** is an Application built for helping people suffering through rare disease. It is made for Solution Challenge 2021
 
-  <a href="https://play.google.com/store/apps/details?id=com.gitpoint">
-    <img alt="Get it on Google Play" title="Google Play" src="http://i.imgur.com/mtGRPuM.png" width="140">
-  </a>
-</p>
+* The app is built using a cross-platform framework called **Flutter**, so it can run on both **iOS** and **Android**.
+
+* **Firebase** is used for Authentication of Users.
+
+* **Cloud Firestore** is used for storing the user-info and the track data.
+
+
 
 
 ## Table of Contents 
@@ -37,17 +35,12 @@
 
 ## Introduction
 
-[![All Contributors](https://img.shields.io/badge/all_contributors-4-orange.svg?style=flat-square)](./Contributors.md)
-[![Gitter](https://badges.gitter.im/Dreave-App/community.svg)](https://gitter.im/Dreave-App/community?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
+
 
 We have made this application with the help of Flutter and FireBase. The Aim of this app is to build a strong community of people who are suffering from rare disease and feel left alone in the society.
 
 
 **Available for both iOS and Android.**
-
-<p align="center">
-  <img src = "images/Screen1.png" width=350>
-</p>
 
 
 ## Screenshots
