@@ -106,7 +106,7 @@ This project follows the  specification and is brought to you by these [awesome 
 Our tech stack consists of the following:
 
 * **Flutter** (cross-platform app development framework)  
-* **Firebase Cloud Firestore & Authentication** (for storing app data and user information)
+* **Firebase ** (Authentication,storing app data )
 
 
 
