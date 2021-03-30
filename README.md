@@ -85,7 +85,7 @@ This project follows the  specification and is brought to you by these [awesome 
 
 ## Problem Statment : Addressing the after-effects
 
-- There are between 5 000 and 8 000 rare diseases, most of them with a genetic basis
+- There are between 5000 and 8000 rare diseases, most of them with a genetic basis
 
 - A very rough estimate would be that one out of 15 persons worldwide could be affected by a rare (“orphan”) disease – 400 million people worldwide, of whom 30 million are in Europe and 25 million in the United States.
 
@@ -135,7 +135,6 @@ flutter pub get
 
 Feel free to send us feedback on [Survey-Form](https://7f0wxfgih3r.typeform.com/to/GnCAQY7G) or [file an issue](https://github.com/gitpoint/Dreave/issues/new). Feature requests are always welcome. If you wish to contribute, please take a quick look at the [guidelines](./CONTRIBUTING.md)!
 
-If there's anything you'd like to chat about, please feel free to join our [Gitter chat](https://gitter.im/git-point)!
 
 
 
