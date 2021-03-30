@@ -74,7 +74,9 @@ class App extends StatelessWidget {
                 settings: settings);
           case ROUTES.COMMUNITY_DES:
             return PageRouteBuilder(
-                pageBuilder: (_, a1, a2) => CommunityDescription(),
+                pageBuilder: (_, a1, a2) => CommunityDescription(
+                      tag: settings.arguments,
+                    ),
                 settings: settings);
           case ROUTES.CREATE_POST_SCREEN:
             return PageRouteBuilder(

@@ -16,9 +16,14 @@ class AuthScreen extends StatefulWidget {
   _AuthScreenState createState() => _AuthScreenState();
 }
 
+bool isEmail = false;
+bool isPhone = false;
+final _formKey = GlobalKey<FormState>();
+
 class _AuthScreenState extends State<AuthScreen>
     with SingleTickerProviderStateMixin {
   // late AuthController _authController;
+
   TextEditingController _nameContoller;
   TextEditingController _phoneOrEmailContoller;
   TextEditingController _passwordOrOtpContoller;
@@ -95,7 +100,9 @@ class _AuthScreenState extends State<AuthScreen>
                                   )
                                 : RichText(
                                     text: TextSpan(
-                                      text: "Verify you phone no.\n",
+                                      text: isEmail
+                                          ? "Enter pin to secure your account!"
+                                          : "Verify you phone no.\n",
                                       style: TextStyle(
                                         fontSize: 31,
                                         fontWeight: FontWeight.bold,
@@ -103,7 +110,9 @@ class _AuthScreenState extends State<AuthScreen>
                                       ),
                                       children: [
                                         TextSpan(
-                                          text: "Enter the OTP received",
+                                          text: isEmail
+                                              ? null
+                                              : "Enter the OTP received",
                                           style: TextStyle(
                                             fontSize: 25,
                                             color:
@@ -125,6 +134,7 @@ class _AuthScreenState extends State<AuthScreen>
                         physics: NeverScrollableScrollPhysics(),
                         children: [
                           Form(
+                            key: _formKey,
                             child: Column(
                               children: [
                                 Padding(
@@ -150,18 +160,45 @@ class _AuthScreenState extends State<AuthScreen>
                                 ),
                                 Padding(
                                   padding: const EdgeInsets.only(top: 10),
-                                  child: TextEditingField(
-                                    passwordContoller: _phoneOrEmailContoller,
-                                    fieldStyle: TextStyle(
+                                  child: TextFormField(
+                                    controller: _phoneOrEmailContoller,
+                                    validator: (value) {
+                                      bool isValid = false;
+
+                                      isValid = value.isValidEmail();
+
+                                      return isValid
+                                          ? null
+                                          : "Please enter in a correct format";
+                                    },
+                                    style: TextStyle(
                                       fontWeight: FontWeight.bold,
                                       fontSize: 16,
                                     ),
-                                    labelText: "Email or Phone",
-                                    hintText: "Email or Phone",
-                                    hintStyle: TextStyle(
-                                      fontSize: 16,
+                                    decoration: InputDecoration(
+                                      border: OutlineInputBorder(
+                                        borderRadius:
+                                            BorderRadius.circular(7.0),
+                                      ),
+                                      labelText: "Email or Phone",
+                                      hintText: "Email or Phone",
+                                      hintStyle: TextStyle(
+                                        fontSize: 16,
+                                      ),
                                     ),
                                   ),
+                                  // TextEditingField(
+                                  //   passwordContoller: _phoneOrEmailContoller,
+                                  //   fieldStyle: TextStyle(
+                                  //     fontWeight: FontWeight.bold,
+                                  //     fontSize: 16,
+                                  //   ),
+                                  //   labelText: "Email or Phone",
+                                  //   hintText: "Email or Phone",
+                                  //   hintStyle: TextStyle(
+                                  //     fontSize: 16,
+                                  //   ),
+                                  // ),
                                 ),
                                 MediaQuery.of(context).viewInsets.bottom == 0
                                     ? divider()
@@ -298,16 +335,30 @@ class _AuthScreenState extends State<AuthScreen>
                       child: Center(
                         child: GestureDetector(
                           onTap: () {
+                            FocusScopeNode currentFocus =
+                                FocusScope.of(context);
+
+                            if (!currentFocus.hasPrimaryFocus) {
+                              currentFocus.unfocus();
+                            }
                             //   if (_nameContoller.text == "8445377229") {
                             //     _authController.phoneAuth(_nameContoller.text);
                             //   } else
                             //     _authController.createAccountWithEmailAndPassword(
                             //         _nameContoller.text, _passwordContoller.text);
+
+                            if (RegExp(
+                                    r'^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$')
+                                .hasMatch(_phoneOrEmailContoller.text)) {
+                              isEmail = true;
+                            }
+
                             setState(() {
-                              _tabController.index == 1
-                                  ? Navigator.pushNamed(
-                                      context, ROUTES.ENTER_SYM)
-                                  : _tabController.animateTo(1);
+                              if (_tabController.index == 1) {
+                                Navigator.pushNamed(context, ROUTES.ENTER_SYM);
+                              } else if (_formKey.currentState.validate()) {
+                                _tabController.animateTo(1);
+                              }
                             });
                           },
                           child: Container(
@@ -356,5 +407,17 @@ class _AuthScreenState extends State<AuthScreen>
     _passwordOrOtpContoller.dispose();
     _tabController.dispose();
     super.dispose();
+  }
+}
+
+extension EmailValidator on String {
+  bool isValidEmail() {
+    return RegExp(
+                r'^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$')
+            .hasMatch(this)
+        ? true
+        : RegExp(r'^[+]*[(]{0,1}[0-9]{1,4}[)]{0,1}[-\s\./0-9]*$').hasMatch(this)
+            ? true
+            : false;
   }
 }
